@@ -173,7 +173,7 @@ Six offline checks passed for feature gaps, dummy API labeling, and mocked inges
 
 - [x] Draft README, architecture, data risks, and validation plan.
 - [x] Prepare ingestion, feature, model, API, and dashboard scaffold.
-- [ ] Create the GitHub repository and push the submission files.
+- [x] Create the GitHub repository and push the submission files.
 - [ ] Audit actual data access and coverage; assign team responsibilities.
 
 ### Round 2 — hours 2–32
