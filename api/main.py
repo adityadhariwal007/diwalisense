@@ -92,7 +92,7 @@ def priorities(date: Date = Date(2025, 10, 20), hour: int = Query(default=23, ge
     for station in model_bundle()['report']['stations']:
         try:
             result = forecast_for(station, date, hour)
-            results.append({key: result[key] for key in ['station_name', 'p10', 'p50', 'p90']})
+            results.append({key: result[key] for key in ['station', 'station_name', 'p10', 'p50', 'p90']})
         except HTTPException as error:
             if error.status_code != 422:
                 raise

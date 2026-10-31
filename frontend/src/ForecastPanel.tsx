@@ -7,7 +7,7 @@ type Forecast = Point & { station_name: string; series: Point[]; range_note: str
 type Score = { n: number; mae: number; rmse: number };
 type Evaluation = { model: Score; baseline_only: Score; persistence: Score; interval_coverage: number };
 type Report = { all_test: Evaluation; diwali_test: Evaluation; leave_one_station_out: Record<string, Evaluation>; independent_training_diwalis: number };
-type Priority = { station_name: string; p10: number; p50: number; p90: number };
+type Priority = { station: string; station_name: string; p10: number; p50: number; p90: number };
 
 async function request<T>(path: string, signal: AbortSignal): Promise<T> {
   const response = await fetch(`${API}${path}`, { signal });
@@ -98,7 +98,7 @@ export default function ForecastPanel() {
         <p className="forecast-caption">{forecast.station_name} · target {timeLabel(forecast.local_time)} IST · issue {timeLabel(forecast.issue_time)} IST</p>
         <ForecastChart points={forecast.series} />
         <p className="forecast-caption">{forecast.series_note} {forecast.range_note}</p>
-        {view === 'officer' && <section className="priority-section"><h3>Station-area review order</h3><p>Higher model estimates first. These are station areas, not ward estimates. Missing stations: {missingCount}.</p><div className="table-scroll"><table><thead><tr><th>Station</th><th>Median</th><th>Model range</th></tr></thead><tbody>{priorities.map(item => <tr key={item.station_name}><td>{item.station_name}</td><td>{item.p50.toFixed(1)}</td><td>{item.p10.toFixed(1)}–{item.p90.toFixed(1)}</td></tr>)}</tbody></table></div></section>}
+        {view === 'officer' && <section className="priority-section"><h3>Station-area review order</h3><p>Higher model estimates first. These are station areas, not ward estimates. Missing stations: {missingCount}.</p><div className="table-scroll"><table><thead><tr><th>Station</th><th>Median</th><th>Model range</th></tr></thead><tbody>{priorities.map(item => <tr key={item.station}><td>{item.station_name}</td><td>{item.p50.toFixed(1)}</td><td>{item.p10.toFixed(1)}–{item.p90.toFixed(1)}</td></tr>)}</tbody></table></div></section>}
         <details><summary>Exact replay values</summary><div className="table-scroll"><table><thead><tr><th>Time (IST)</th><th>P10</th><th>P50</th><th>P90</th><th>Observed</th></tr></thead><tbody>{forecast.series.map(point => <tr key={point.time}><td>{timeLabel(point.local_time)}</td><td>{point.p10}</td><td>{point.p50}</td><td>{point.p90}</td><td>{point.observed}</td></tr>)}</tbody></table></div></details>
         <p className="forecast-caption">{forecast.advice} The Diwali adjustment is an event-associated residual, not proven cracker pollution.</p>
       </>}
