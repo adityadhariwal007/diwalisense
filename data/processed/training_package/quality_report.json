@@ -1,0 +1,26 @@
+{
+  "rows": 684255,
+  "stations": 39,
+  "valid_pm25": 628180,
+  "complete_required_rows": 471920,
+  "timestamp_policy": "IST wall-clock interpretation supported by 3 sampled 2024 station-days from XKDR; not provider-confirmed for all stations/2025. UTC-hour bins use original quarter-hour observations. Bins spanning local year boundaries are excluded from development/holdout.",
+  "limitations": [
+    "Only 2024-2025 Delhi; 2017-2023 and NCR outside Delhi are not covered.",
+    "Repeated quarter-hour readings may not be independent measurements.",
+    "Reanalysis weather supports retrospective experiments, not operational forecast validation.",
+    "Reporting latency is unknown; available_no_earlier_than is only the end of the aggregation interval."
+  ],
+  "files": {
+    "coverage.csv": "17cca60bd708af321baa13f40080e94fc5785b07fd98a0c25cc7bf3b953a31fe",
+    "development_2024.csv.gz": "ad95d11b4e47a08a09580cb52cfc0257a016f5306e5772e37946a7d4602976a6",
+    "development_2024.parquet": "b39461a9c49f6140be9f40a3a7cbf61bce56b27077ee4b957d1b869a5b7986a7",
+    "holdout_2025.csv.gz": "43471392886bedfc34662d9c7fff13a0c5e5636d4b1628a237e4e10ee3a627e0",
+    "holdout_2025.parquet": "a39259d86cef733d65a3d700d44afe49daf0d1632f8ef465044ebef559ddd60b",
+    "pm25_hourly.parquet": "8fd9ec98dabf3684827597e6ac7bd5fe1ca9e32c2cb762de34561697013a7da6",
+    "stations.csv": "4bd57adfdf4847b67e41db310b4f04357dbfdd57fb0cc1fe9d519d006c5c0584",
+    "timestamp_audit.json": "04b3a034f754079159d516a3523962ae61dc398be9de55d3a4cc354c8e3dfff0",
+    "weather_hourly.parquet": "97f6721493dd93733245c73e18a0a2fb604b9c9abbd2e85260ec3a6ae5469822",
+    "year_boundary_excluded.csv.gz": "4edf3930e6ec80aca968fc35d8bed9ca3ad17e3a38c2ef40543fcb35c29ab201",
+    "year_boundary_excluded.parquet": "f7806852ce15768579e026902b8690048e89b428f150d42933c0b213b34d82f4"
+  }
+}

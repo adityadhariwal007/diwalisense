@@ -1,0 +1,1683 @@
+{
+  "catalog_license": "Other (Public Domain)",
+  "source": "https://data.opencity.in/dataset/delhi-hourly-air-quality-reports",
+  "resources": [
+    {
+      "resource_id": "bf15420f-f44d-468a-87fc-499a4da4ec2d",
+      "name": "Alipur DPCC 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/bf15420f-f44d-468a-87fc-499a4da4ec2d/download/del-alipur-dpcc-2024-25.csv",
+      "sha256": "99f481b0034150202834fb0653e3c7d30b63b69a14e10788fe85798e818e63f6",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 16873,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_5024",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8530
+        },
+        {
+          "station_id": "site_5024",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8343
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_5024",
+          "Station Name": "Alipur, Delhi - DPCC",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "5ef3f66f-2bb0-4593-91db-ba6e693a77f3",
+      "name": "Anand Vihar DPCC 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/5ef3f66f-2bb0-4593-91db-ba6e693a77f3/download/del-anand-vihar-dpcc-2024-25.csv",
+      "sha256": "bf9a92d59abfcc36836b60d8aa501846061a795cc57df427cea156ba327de2b3",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 14953,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_301",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 6955
+        },
+        {
+          "station_id": "site_301",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 7998
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_301",
+          "Station Name": "Anand Vihar, Delhi - DPCC",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "73703a83-f321-4b60-8748-33fb046273e0",
+      "name": "Ashok Vihar DPCC 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/73703a83-f321-4b60-8748-33fb046273e0/download/del-ashok-vihar-dpcc-2024-25.csv",
+      "sha256": "8e405c516a2edd8e93897a7717a588a48c40333d6c74af9e5731413b02eb7d92",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 17165,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_1420",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8596
+        },
+        {
+          "station_id": "site_1420",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8569
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_1420",
+          "Station Name": "Ashok Vihar, Delhi - DPCC",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "b64a05dc-a327-4f10-9f77-685b1fd59f0f",
+      "name": "Aya Nagar IMD 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/b64a05dc-a327-4f10-9f77-685b1fd59f0f/download/del-aya-nagar-imd-2024-25.csv",
+      "sha256": "c1374298abc6624651b3bcc85b10fe09c3816f949569456dcd1e05c5523ac6f8",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 16630,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_108",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8391
+        },
+        {
+          "station_id": "site_108",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8239
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_108",
+          "Station Name": "Aya Nagar, Delhi - IMD",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "102d2fad-f2dd-41c5-b5a6-2db6c75b3712",
+      "name": "Bawana DPCC 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/102d2fad-f2dd-41c5-b5a6-2db6c75b3712/download/del-bawana-dpcc-2024-25.csv",
+      "sha256": "599bdcd07623abe2fea9050a1dd112dc134155907951fcee342d5cf1dc97cf4d",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 17090,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_1560",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8549
+        },
+        {
+          "station_id": "site_1560",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8541
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_1560",
+          "Station Name": "Bawana, Delhi - DPCC",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "9fee9210-33ec-4dfd-b230-b8d677bf81f3",
+      "name": "Burari Crossing IMD 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/9fee9210-33ec-4dfd-b230-b8d677bf81f3/download/del-burari-crossing-imd-2024-25.csv",
+      "sha256": "72ff14652f4a7e3e4f75c8c4938b3ef3068605c97d4f10f70531c6b42cc62891",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 16277,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_104",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8326
+        },
+        {
+          "station_id": "site_104",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 7951
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_104",
+          "Station Name": "Burari Crossing, Delhi - IMD",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "61ec5645-c2cf-4890-9692-70b3924ed4d8",
+      "name": "Chandni Chowk IITM 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/61ec5645-c2cf-4890-9692-70b3924ed4d8/download/del-chandni-chowk-iitm-2024-25.csv",
+      "sha256": "b1532037e04de9796041944d179e8f61df9319cd0708066df98138158062678f",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 9726,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_5393",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 2988
+        },
+        {
+          "station_id": "site_5393",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 6738
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_5393",
+          "Station Name": "Chandni Chowk, Delhi - IITM",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "c4ec16f3-edfc-465e-8fb8-5bfaa14f8baa",
+      "name": "CRRI Mathura Road IMD 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/c4ec16f3-edfc-465e-8fb8-5bfaa14f8baa/download/del-crri-mathura-road-imd-2024-25.csv",
+      "sha256": "85a5fc98a0024a7b7058168524248d53c7f819640bd3e565dcc3783dc2c9ca97",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 15255,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_103",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 6852
+        },
+        {
+          "station_id": "site_103",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8403
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_103",
+          "Station Name": "CRRI Mathura Road, Delhi - IMD",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "97adf51a-bf80-4a08-b338-6f9936ad4ef1",
+      "name": "Dr. Karni Singh Shooting Range DPCC 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/97adf51a-bf80-4a08-b338-6f9936ad4ef1/download/del-dr-2024-25.csv",
+      "sha256": "e6fc6384d76794a0ddff7bf3334dbc7d105c7c91387fd2d6d0cee21784381c80",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 17082,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_1421",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8585
+        },
+        {
+          "station_id": "site_1421",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8497
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_1421",
+          "Station Name": "Dr. Karni Singh Shooting Range, Delhi - DPCC",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "3abd2c56-3523-4802-8633-f37055d3b276",
+      "name": "DTU CPCB 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/3abd2c56-3523-4802-8633-f37055d3b276/download/del-dtu-cpcb-2024-25.csv",
+      "sha256": "a92ec85f469881d925b09a2f9dc58372c9708abdbc715bc0f39927d04eeb5f9e",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 16217,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_118",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8097
+        },
+        {
+          "station_id": "site_118",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8120
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_118",
+          "Station Name": "DTU, Delhi - CPCB",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "495db3d4-5683-4b1d-9b7d-34ecb887ca13",
+      "name": "Dwarka Sector 8 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/495db3d4-5683-4b1d-9b7d-34ecb887ca13/download/del-dwarka-sector-8-dpcc-2024-25.csv",
+      "sha256": "0d3d564b4c6c7e2c94ab7b77c61a585f9b952388c4f3b8877ad2c3d8e9c92d2e",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 17312,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_1422",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8746
+        },
+        {
+          "station_id": "site_1422",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8566
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_1422",
+          "Station Name": "Dwarka-Sector 8, Delhi - DPCC ",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "ea589978-8578-4c94-953f-6ba64a810e64",
+      "name": "IGI Airport (T3) IMD 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/ea589978-8578-4c94-953f-6ba64a810e64/download/del-igi-airport-t3-imd-2024-25.csv",
+      "sha256": "c8fde6178f676d4798049ee28feb790f7287ed9a5a5adcb82791a77fc0089084",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 16163,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_106",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8656
+        },
+        {
+          "station_id": "site_106",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 7507
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_106",
+          "Station Name": "IGI Airport (T3), Delhi - IMD",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "4cc723ba-bbd1-459f-b4b6-658107defa65",
+      "name": "IHBAS CPCB 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/4cc723ba-bbd1-459f-b4b6-658107defa65/download/del-ihbas-cpcb-2024-25.csv",
+      "sha256": "15bc3fc6385646a9f7c57c95c7d00065ee592ab71c3671056e426af37fb9cce2",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 15613,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_114",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8165
+        },
+        {
+          "station_id": "site_114",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 7448
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_114",
+          "Station Name": "IHBAS, Dilshad Garden, Delhi - CPCB",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "890f786d-fb9f-475e-8516-191bfa1b01ea",
+      "name": "ITO CPCB 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/890f786d-fb9f-475e-8516-191bfa1b01ea/download/del-ito-cpcb-2024-25.csv",
+      "sha256": "dfd2f715c38326a08ce096bd05d800e770ef041ed77978660c026d7dc1822df8",
+      "raw_rows": 68985,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 16375,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_117",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8211
+        },
+        {
+          "station_id": "site_117",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8164
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_117",
+          "Station Name": "ITO, Delhi - CPCB",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "734c459f-3e47-44c7-b0b8-8270090cecf0",
+      "name": "Jahangirpuri DPCC 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/734c459f-3e47-44c7-b0b8-8270090cecf0/download/del-jahangirpuri-dpcc-2024-25.csv",
+      "sha256": "3f401d35e477d119e46ad496862e055af05e4dbf0fa5f1c2e5c12ebd81ddaa6d",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 16415,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_1423",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8316
+        },
+        {
+          "station_id": "site_1423",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8099
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_1423",
+          "Station Name": "Jahangirpuri, Delhi - DPCC",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "d4b78e81-57ce-487c-a5f5-69c64880dd05",
+      "name": "Jawaharlal Nehru Stadium DPCC 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/d4b78e81-57ce-487c-a5f5-69c64880dd05/download/del-jawaharlal-nehru-stadium-dpcc-2024-25.csv",
+      "sha256": "a34172096a39a98d9aa3da31a520b14f99acd99ae57d2d0305093d79f4c6c88d",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 16945,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_1424",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8567
+        },
+        {
+          "station_id": "site_1424",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8378
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_1424",
+          "Station Name": "Jawaharlal Nehru Stadium, Delhi - DPCC",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "99a25262-def3-4898-9f63-a65c0bbeaecd",
+      "name": "Lodhi Road IITM 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/99a25262-def3-4898-9f63-a65c0bbeaecd/download/del-lodhi-road-iitm-2024-25.csv",
+      "sha256": "90c6ec4cd11ed6d0e3c2bccc9efb70f2747a8c6a62dd4795af5ab0295bbcaed8",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 11694,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_5395",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 5022
+        },
+        {
+          "station_id": "site_5395",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 6672
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_5395",
+          "Station Name": "Lodhi Road, Delhi - IITM",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "1731db44-1f8c-4959-a408-b3d38641eb98",
+      "name": "Lodhi Road IMD 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/1731db44-1f8c-4959-a408-b3d38641eb98/download/del-lodhi-road-imd-2024-25.csv",
+      "sha256": "00fe59091a90646e48e7fc9f8e0a135fb238451a0fc4edc0700a1a22fdb2e340",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 15626,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_109",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8576
+        },
+        {
+          "station_id": "site_109",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 7050
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_109",
+          "Station Name": "Lodhi Road, Delhi - IMD",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "b3f4e17b-8767-4c48-99cf-3eea8e7be030",
+      "name": "Major Dhyan Chand National Stadium DPCC 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/b3f4e17b-8767-4c48-99cf-3eea8e7be030/download/del-major-dhyan-chand-national-stadium-dpcc-2024-25.csv",
+      "sha256": "7928d3d949ea3a34a66b08eea1be0b27e18257d09dc398d20728b7b21875e104",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 16713,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_1425",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8303
+        },
+        {
+          "station_id": "site_1425",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8410
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_1425",
+          "Station Name": "Major Dhyan Chand National Stadium, Delhi - DPCC",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "922c72d8-c66e-4336-8cd9-49898776ca69",
+      "name": "Mandir Marg DPCC 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/922c72d8-c66e-4336-8cd9-49898776ca69/download/del-mandir-marg-dpcc-2024-25.csv",
+      "sha256": "502e52c6abdc66109b0aa1e9a74d5cd4ce39c7f351c0903927b5546bab1cf2ed",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 14677,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_122",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 6992
+        },
+        {
+          "station_id": "site_122",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 7685
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_122",
+          "Station Name": "Mandir Marg, Delhi - DPCC",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "3fe46cce-659f-49a7-a743-090c2557cbfd",
+      "name": "Mundka DPCC 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/3fe46cce-659f-49a7-a743-090c2557cbfd/download/del-mundka-dpcc-2024-25.csv",
+      "sha256": "feea23addf755c9c040d0d04932443dd7908651dc765573918fe2e9b4b6c8af9",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 16932,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_1561",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8457
+        },
+        {
+          "station_id": "site_1561",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8475
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_1561",
+          "Station Name": "Mundka, Delhi - DPCC",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "99054843-c5c1-4ebd-8557-dabf455f0e3b",
+      "name": "Najafgarh DPCC 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/99054843-c5c1-4ebd-8557-dabf455f0e3b/download/del-najafgarh-dpcc-2024-25.csv",
+      "sha256": "b87b4f88916fe49a2a7fa42342818026f9c979607fc134478ae62eb4edd2d162",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 16356,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_1427",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8179
+        },
+        {
+          "station_id": "site_1427",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8177
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_1427",
+          "Station Name": "Najafgarh, Delhi - DPCC",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "b87d0285-e677-403c-aa5d-9b9ab41386eb",
+      "name": "Narela DPCC 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/b87d0285-e677-403c-aa5d-9b9ab41386eb/download/del-narela-dpcc-2024-25.csv",
+      "sha256": "5e551927b3cbc12373c6fc7937c639ee683b93c5e45f17de9c5d337831e3b265",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 17293,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_1426",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8637
+        },
+        {
+          "station_id": "site_1426",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8656
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_1426",
+          "Station Name": "Narela, Delhi - DPCC",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "5ee93ef5-afe3-4cac-847d-f21cc4e8d67f",
+      "name": "Nehru Nagar DPCC 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/5ee93ef5-afe3-4cac-847d-f21cc4e8d67f/download/del-nehru-nagar-dpcc-2024-25.csv",
+      "sha256": "d485730dcfceced0a6c3c0993bbe89ad8dff9ca87b7825c90ecffea0387572ee",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 17193,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_1429",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8562
+        },
+        {
+          "station_id": "site_1429",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8631
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_1429",
+          "Station Name": "Nehru Nagar, Delhi - DPCC",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "b3561bac-73ff-4048-8a84-4e1eba5953d1",
+      "name": "North Campus IMD 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/b3561bac-73ff-4048-8a84-4e1eba5953d1/download/del-north-campus-imd-2024-25.csv",
+      "sha256": "f0d6110456bab4011f51dd531bb59d0ca976538f9adc166fe26b63a324fc4856",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 16859,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_105",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8427
+        },
+        {
+          "station_id": "site_105",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8432
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_105",
+          "Station Name": "North Campus, DU, Delhi - IMD",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "f7d16626-68d5-4de3-b6e6-e6a1b8831db3",
+      "name": "NSIT Dwarka CPCB 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/f7d16626-68d5-4de3-b6e6-e6a1b8831db3/download/del-nsit-dwarka-cpcb-2024-25.csv",
+      "sha256": "8f79dd02240f9c2ea8bb21b12e72e4d635c5a4c993680a736217454b479b7a28",
+      "raw_rows": 69024,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 16504,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_115",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8272
+        },
+        {
+          "station_id": "site_115",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8232
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_115",
+          "Station Name": "NSIT Dwarka, Delhi - CPCB",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "7b03c3c3-c95e-4d09-b1a8-8951b96c05b6",
+      "name": "Okhla Phase 2 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/7b03c3c3-c95e-4d09-b1a8-8951b96c05b6/download/del-okhla-phase-2-dpcc-2024-25.csv",
+      "sha256": "b05df492676dcfdaa513e23506c6ca9a7ea6f8d7618545d78de80f9631aae86d",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 17123,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_1428",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8653
+        },
+        {
+          "station_id": "site_1428",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8470
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_1428",
+          "Station Name": "Okhla Phase-2, Delhi - DPCC",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "7d563edf-b8ee-4c61-83eb-baa73b12f79b",
+      "name": "Patparganj DPCC 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/7d563edf-b8ee-4c61-83eb-baa73b12f79b/download/del-patparganj-dpcc-2024-25.csv",
+      "sha256": "d562f15d313970b0b19eb4d6f1e273b9aa38b964e918a1c41510d41d6b9cf611",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 17178,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_1431",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8607
+        },
+        {
+          "station_id": "site_1431",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8571
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_1431",
+          "Station Name": "Patparganj, Delhi - DPCC",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "82080ddc-e094-4a3a-8421-242ec6bc8a45",
+      "name": "Punjabi Bagh DPCC 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/82080ddc-e094-4a3a-8421-242ec6bc8a45/download/del-punjabi-bagh-dpcc-2024-25.csv",
+      "sha256": "ea41db9ddfaa3760ac57c7f0403a64dbc38a6151be7dbc467b550e583059663a",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 16562,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_125",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8497
+        },
+        {
+          "station_id": "site_125",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8065
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_125",
+          "Station Name": "Punjabi Bagh, Delhi - DPCC",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "24298b91-40d8-4d9d-a652-c8acb6602136",
+      "name": "Pusa DPCC 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/24298b91-40d8-4d9d-a652-c8acb6602136/download/del-pusa-dpcc-2024-25.csv",
+      "sha256": "ca6a08e8327e21ae4c447de79cf1541a0d5404d2e2dd3d7a8fb845e65472e118",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 16929,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_1563",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8461
+        },
+        {
+          "station_id": "site_1563",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8468
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_1563",
+          "Station Name": "Pusa, Delhi - DPCC",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "48881f84-b60b-4178-939e-0a0d1051be11",
+      "name": "Pusa IMD 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/48881f84-b60b-4178-939e-0a0d1051be11/download/del-pusa-imd-2024-25.csv",
+      "sha256": "7c6ca67dc3e13c07307fdb09630d5ae00def0affdd6fbbfc9362eceb0f0a01eb",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 16730,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_107",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8425
+        },
+        {
+          "station_id": "site_107",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8305
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_107",
+          "Station Name": "Pusa, Delhi - IMD",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "d9dfd28d-038d-448f-8e33-5e6f6b32d15c",
+      "name": "R K Puram DPCC 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/d9dfd28d-038d-448f-8e33-5e6f6b32d15c/download/del-r-k-puram-dpcc-2024-25.csv",
+      "sha256": "2da67b756d4866e3f49c27df61091add5752c2f45e1d13d6f0240cf04fc52340",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 16523,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_124",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8218
+        },
+        {
+          "station_id": "site_124",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8305
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_124",
+          "Station Name": "R K Puram, Delhi - DPCC",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "f6be929b-151a-4b92-b5b4-507481b15128",
+      "name": "Rohini DPCC 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/f6be929b-151a-4b92-b5b4-507481b15128/download/del-rohini-dpcc-2024-25.csv",
+      "sha256": "e160fbf7dadd0594df894190ba466c96324af9638415b9732ebfd42bf275f61b",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 17030,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_1430",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8464
+        },
+        {
+          "station_id": "site_1430",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8566
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_1430",
+          "Station Name": "Rohini, Delhi - DPCC",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "e91c68ea-85ac-49f8-8015-dd8b04c32a71",
+      "name": "Shadipur CPCB 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/e91c68ea-85ac-49f8-8015-dd8b04c32a71/download/del-shadipur-cpcb-2024-25.csv",
+      "sha256": "d214c4beb3e0995d3d0dc710f4893f4d7dc73295f205ee2e5e3a6568d39af052",
+      "raw_rows": 67951,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 16324,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_113",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8399
+        },
+        {
+          "station_id": "site_113",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 7925
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_113",
+          "Station Name": "Shadipur, Delhi - CPCB",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "e562d0c9-cc37-4d5a-a04e-fd95ee9f2f04",
+      "name": "Sirifort CPCB 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/e562d0c9-cc37-4d5a-a04e-fd95ee9f2f04/download/del-sirifort-cpcb-2024-25.csv",
+      "sha256": "41b60f2a86598d6e1567695aeebbc61e4a44447d22bd25ac88a4308971d10626",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 14488,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_119",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 6129
+        },
+        {
+          "station_id": "site_119",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8359
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_119",
+          "Station Name": "Sirifort, Delhi - CPCB",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "d496427e-c92f-44f9-a415-d3c0778e0930",
+      "name": "Sonia Vihar DPCC 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/d496427e-c92f-44f9-a415-d3c0778e0930/download/del-sonia-vihar-dpcc-2024-25.csv",
+      "sha256": "bc11d9cf240948fba1b74b29f98fc3933e73b7f70f040cad177847138fe588c0",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 16716,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_1432",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8330
+        },
+        {
+          "station_id": "site_1432",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8386
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_1432",
+          "Station Name": "Sonia Vihar, Delhi - DPCC",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "e42457e9-d117-4323-bdb9-bbf2a491922e",
+      "name": "Sri Aurobindo Marg DPCC 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/e42457e9-d117-4323-bdb9-bbf2a491922e/download/del-sri-aurobindo-marg-dpcc-2024-25.csv",
+      "sha256": "c40af67799ca481fd0be60204da7925b1feb7c513e3e21db71f79e0beb9faa7f",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 16823,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_1562",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8573
+        },
+        {
+          "station_id": "site_1562",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8250
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_1562",
+          "Station Name": "Sri Aurobindo Marg, Delhi - DPCC",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "19172e66-45d4-4d3c-8736-e573b160fe99",
+      "name": "Vivek Vihar DPCC 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/19172e66-45d4-4d3c-8736-e573b160fe99/download/del-vivek-vihar-dpcc-2024-25.csv",
+      "sha256": "6e435b278e6d52499b70a3adc34ffb2ce69d9cb7c63ac61b97045cb0993cc782",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 16774,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_1435",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8386
+        },
+        {
+          "station_id": "site_1435",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8388
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_1435",
+          "Station Name": "Vivek Vihar, Delhi - DPCC",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    },
+    {
+      "resource_id": "70bfe4b2-b869-4f1c-9c25-f4b768858c1c",
+      "name": "Wazirpur DPCC 15 minute AQI Data for 2024-25",
+      "url": "https://data.opencity.in/dataset/0dc7b9fe-9fd4-46ee-a37e-88f0bd6f6362/resource/70bfe4b2-b869-4f1c-9c25-f4b768858c1c/download/del-wazirpur-dpcc-2024-25.csv",
+      "sha256": "e5ae9c9642bedebe977075b8472fb093509b79fa515faaa47b3c4218f718342d",
+      "raw_rows": 70177,
+      "invalid_timestamps": 1,
+      "negative_pm25": 0,
+      "duplicate_timestamps": 0,
+      "status": "ok",
+      "hourly_rows": 17544,
+      "valid_pm25": 17117,
+      "start": "2024-01-01 00:00:00+00:00",
+      "end": "2025-12-31 23:00:00+00:00",
+      "coverage": [
+        {
+          "station_id": "site_1434",
+          "year": 2024,
+          "hours": 8784,
+          "valid_pm25": 8536
+        },
+        {
+          "station_id": "site_1434",
+          "year": 2025,
+          "hours": 8760,
+          "valid_pm25": 8581
+        }
+      ],
+      "stations": [
+        {
+          "Station ID": "site_1434",
+          "Station Name": "Wazirpur, Delhi - DPCC",
+          "City": "Delhi",
+          "State": "Delhi"
+        },
+        {
+          "Station ID": "2025",
+          "Station Name": NaN,
+          "City": NaN,
+          "State": NaN
+        }
+      ]
+    }
+  ]
+}

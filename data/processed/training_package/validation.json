@@ -1,0 +1,13 @@
+{
+  "development_2024": {
+    "rows": 342537,
+    "valid_pm25": 311877,
+    "complete_required_rows": 155617
+  },
+  "holdout_2025": {
+    "rows": 341601,
+    "valid_pm25": 316268,
+    "complete_required_rows": 316268
+  },
+  "checks": "Passed: unique/aligned UTC hours, disjoint local-year splits including bin ends, PM2.5 completeness and nonnegative values, weather ranges, repository feature builder and lag behavior."
+}

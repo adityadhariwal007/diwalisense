@@ -1,0 +1,13 @@
+{
+  "source": "https://www.kaggle.com/datasets/rohanrao/air-quality-data-in-india",
+  "archive_sha256": "4ce4e048e6698b277b6d8f14d830c1f7434769416302dcdbab4f0826ee750ff9",
+  "rows": 913203,
+  "valid_pm25": 766782,
+  "stations": 38,
+  "start": "2017-01-01 00:00:00",
+  "end": "2020-07-01 00:00:00",
+  "negative_pm25_masked": 0,
+  "duplicate_station_times": 0,
+  "status": "historical staging; timezone and station crosswalk must be resolved before combining with training_package",
+  "license": "CC0: Public Domain, verified in Kaggle API catalog cached as data/raw/kaggle/catalog.json"
+}

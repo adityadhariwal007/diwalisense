@@ -1,0 +1,23 @@
+[
+  {
+    "station_id": "site_5024",
+    "date": "2024-01-01",
+    "compared": 22,
+    "exact_matches": 22,
+    "mean_absolute_difference": 0.0
+  },
+  {
+    "station_id": "site_301",
+    "date": "2024-11-01",
+    "compared": 22,
+    "exact_matches": 22,
+    "mean_absolute_difference": 0.0
+  },
+  {
+    "station_id": "site_1560",
+    "date": "2024-06-01",
+    "compared": 24,
+    "exact_matches": 24,
+    "mean_absolute_difference": 0.0
+  }
+]
