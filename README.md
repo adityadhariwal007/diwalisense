@@ -4,6 +4,8 @@ Forecasting neighborhood air pollution around Diwali, with clear uncertainty and
 
 Built for **RootAccess**, an environment and sustainability hackathon.
 
+[Round 1 presentation: Team Clauders](output/DiwaliSense-Clauders-Round1.pptx) — five slides with speaker notes, following the supplied template.
+
 **Status: Round 1 scaffold.** Ingestion adapters, hourly features, quantile-training skeletons, a dummy API, and a dashboard placeholder are implemented. There are no trained operational forecasts, validated ward estimates, or measured accuracy results yet.
 
 ## The problem
@@ -195,10 +197,9 @@ If coverage cannot support the burst model or 2025 test, demonstrate the validat
 
 ## Team
 
-- [Name — Data ingestion and coverage]
-- [Name — Models and validation]
-- [Name — Spatial layer and backend]
-- [Name — Dashboard and presentation]
+**Team Clauders:** Aditya, Maanvik, Palakshi, and Manveer.
+
+Roles will be assigned by the team.
 
 ## License
 

@@ -7,6 +7,8 @@ __pycache__/
 .pytest_cache/
 .DS_Store
 .ipynb_checkpoints/
+.presentation-build/
+.codex-finalizer/
 data/raw/*
 data/processed/*
 !data/raw/.gitkeep
