@@ -9,6 +9,8 @@ __pycache__/
 .ipynb_checkpoints/
 .presentation-build/
 .codex-finalizer/
+node_modules/
+frontend/dist/
 data/raw/*
 data/processed/*
 !data/raw/.gitkeep

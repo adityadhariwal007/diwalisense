@@ -161,6 +161,32 @@ python -m streamlit run app/dashboard.py
 
 API docs: <http://127.0.0.1:8000/docs>. Dashboard: <http://localhost:8501>.
 
+### React website
+
+The cinematic landing page lives in `frontend/` and uses React, Vite, TypeScript,
+and Tailwind CSS. Use Node.js 22.12+ or a supported newer version:
+
+```bash
+cd frontend
+npm ci
+npm run dev
+```
+
+Open the local URL printed by Vite; opening `frontend/index.html` directly will
+not run the app. For production output, run `npm run build`; `npm test` checks
+the video fade boundaries.
+
+The page adapts the supplied cinematic reference to DiwaliSense. Its navigation
+and forecast CTA open accessible information panels. The forecast panel clearly
+states that predictions are not available; it is not connected to FastAPI.
+The supplied nature video, fallback image, and fonts are bundled locally for
+offline use after dependencies are installed. Motion can be paused and respects
+the device's reduced-motion setting. The video uses a manual fade loop, with a
+100 ms restart delay. Lenis and GSAP downloads remain in `app/static/vendor/`;
+this single-screen page uses CSS transitions rather than adding scroll libraries.
+The supplied video remains a third-party asset; redistribution rights have not
+been verified.
+
 `GET /forecast?ward=Demo` returns **dummy values**, marked `is_dummy: true`; they are not predictions. The dashboard is a placeholder and is not yet connected to the endpoint.
 
 Code is organized under `src/ingestion/`, `src/features/`, `src/models/`, `src/spatial/`, `src/actions/`, and `src/validation/`. Data belongs in `data/raw/` and `data/processed/`, with generated model outputs in `artifacts/`. Spatial, action, and validation packages contain TODOs. Download dependencies and inputs before the offline event; local map geometry and cached forecast display remain TODO.
