@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react';
 import PageHeader from './PageHeader';
+import { cloudData, cloudEnabled } from './cloud-data';
 
 const API = import.meta.env.DEV ? '/api' : '';
 export type LocationChoice = { name: string; latitude: number; longitude: number };
 type AQI = { display: string; label: string; tone: string };
 type Reading = { pm25: number | null; aqi: AQI | null; cigarettes: { day: number; week: number; year: number } | null };
 type Phase = { label: string; date: string; recorded: Reading; estimated: Reading; observed_hours: number; predicted_hours: number };
-type Comparison = { area: string; distance_km: number; phases: Phase[]; details: Record<string, string> };
+export type Comparison = { area: string; distance_km: number; phases: Phase[]; details: Record<string, string> };
 
 async function getJson<T>(path: string, signal: AbortSignal, body?: unknown): Promise<T> {
+  if (cloudEnabled) return await cloudData(path, signal, body) as T;
   const response = await fetch(`${API}${path}`, body ? { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), signal } : { signal });
   let data;
   try { data = await response.json(); } catch { throw new Error('Air data is unavailable. Please try again.'); }
@@ -92,7 +94,7 @@ export default function ComparisonPage({ location, onLocationChange }: { locatio
     {(!location || changingLocation) && <section className="location-panel" aria-labelledby="location-heading">
       <h2 id="location-heading">Where are you?</h2><p>Share your location, or enter your area in Delhi.</p>
       <button className="solid-button location-button" onClick={useLocation} disabled={locating}>{locating ? 'Finding your location…' : 'Use my location'}</button>
-      <p className="location-privacy">Your location is used by this local app, not a map service.</p>
+      <p className="location-privacy">Your location helps find nearby air data. It is not saved.</p>
       <label htmlFor="area-search">Or type your area</label><input id="area-search" type="search" placeholder="Try Rohini, ITO or Alipur" value={query} onChange={event => setQuery(event.target.value)} autoComplete="off" />
       {!!matches.length && <ul className="area-results" aria-label="Matching areas">{matches.map(area => <li key={area.name}><button onClick={() => choose(area)}>{area.name}<span>Delhi</span></button></li>)}</ul>}
       {query && !matches.length && <p>No matching Delhi area. Try a nearby area name.</p>}
