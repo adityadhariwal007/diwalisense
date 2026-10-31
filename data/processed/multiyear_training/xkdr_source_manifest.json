@@ -1,0 +1,51 @@
+{
+  "source": "https://airquality.xkdr.org/",
+  "attribution": "India Air Quality Database, XKDR Forum; CPCB CAAQM. CC BY 4.0.",
+  "files": [
+    {
+      "year": 2017,
+      "rows": 73906,
+      "sha256": "e402c2c82c3713f1d32260e936606b974fe8154d122fbad1cfe1baa24b8cc339"
+    },
+    {
+      "year": 2018,
+      "rows": 268112,
+      "sha256": "61bf0d5e877b8c4804b8796b5945dad4dd2582b7ac5c47ca58ce3247ab203d92"
+    },
+    {
+      "year": 2019,
+      "rows": 309745,
+      "sha256": "e9f27028006b027069e37d07f400daf137d3f2a0457f51b7a4cbdef6c0971516"
+    },
+    {
+      "year": 2020,
+      "rows": 300236,
+      "sha256": "5c7d6d9fa13ec0e154a8413542bbd4f101704fa03490cee6924df882cb0da2dc"
+    },
+    {
+      "year": 2021,
+      "rows": 310648,
+      "sha256": "83a827dc6df36c89ce4d25e3da4599dfd57c96add6600a915140646ca72f77cd"
+    },
+    {
+      "year": 2022,
+      "rows": 316312,
+      "sha256": "188d8e87f226d4041b305a6de4b575f5fa4f43dbdf960ac807570c4722a00b57"
+    },
+    {
+      "year": 2023,
+      "rows": 309748,
+      "sha256": "7e9e21d1cc572f09c8b464987faad22a93d384546bad2fb5da2d16d9d1728359"
+    },
+    {
+      "year": 2024,
+      "rows": 317627,
+      "sha256": "92643ab8d079fa14d41b63fd58b14388e73a801ddeb612969f7d3c3eeb0c2edb"
+    },
+    {
+      "year": 2025,
+      "rows": 133917,
+      "sha256": "51bd128dcd9dd23a0807a41c40ed58e38090750789c11182f22f0741b7b0e9fe"
+    }
+  ]
+}

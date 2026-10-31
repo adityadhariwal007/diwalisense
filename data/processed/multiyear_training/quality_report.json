@@ -1,0 +1,125 @@
+{
+  "source": "https://airquality.xkdr.org/",
+  "attribution": "XKDR Forum; CPCB CAAQM, CC BY 4.0. Weather: Open-Meteo / Copernicus ERA5, CC BY 4.0.",
+  "status": "retrospective_observation_inputs_not_fitted_models_or_residual_targets",
+  "years": [
+    {
+      "year": 2017,
+      "rows": 73906,
+      "valid_pm25": 73906,
+      "complete_required_rows": 73906,
+      "stations": 17,
+      "first_local": "2017-01-01 00:00:00",
+      "last_local": "2017-12-31 23:00:00",
+      "event_rows": 2953,
+      "event_valid_pm25": 2953,
+      "stations_with_75pct_event_pm25": 3
+    },
+    {
+      "year": 2018,
+      "rows": 268112,
+      "valid_pm25": 268112,
+      "complete_required_rows": 268112,
+      "stations": 37,
+      "first_local": "2018-01-01 00:00:00",
+      "last_local": "2018-12-31 23:00:00",
+      "event_rows": 18195,
+      "event_valid_pm25": 18195,
+      "stations_with_75pct_event_pm25": 35
+    },
+    {
+      "year": 2019,
+      "rows": 309745,
+      "valid_pm25": 309745,
+      "complete_required_rows": 309745,
+      "stations": 37,
+      "first_local": "2019-01-01 00:00:00",
+      "last_local": "2019-12-31 23:00:00",
+      "event_rows": 18849,
+      "event_valid_pm25": 18849,
+      "stations_with_75pct_event_pm25": 36
+    },
+    {
+      "year": 2020,
+      "rows": 300236,
+      "valid_pm25": 300236,
+      "complete_required_rows": 300236,
+      "stations": 38,
+      "first_local": "2020-01-01 00:00:00",
+      "last_local": "2020-12-31 23:00:00",
+      "event_rows": 18609,
+      "event_valid_pm25": 18609,
+      "stations_with_75pct_event_pm25": 34
+    },
+    {
+      "year": 2021,
+      "rows": 310648,
+      "valid_pm25": 310648,
+      "complete_required_rows": 310648,
+      "stations": 39,
+      "first_local": "2021-01-01 00:00:00",
+      "last_local": "2021-12-31 23:00:00",
+      "event_rows": 19089,
+      "event_valid_pm25": 19089,
+      "stations_with_75pct_event_pm25": 36
+    },
+    {
+      "year": 2022,
+      "rows": 316312,
+      "valid_pm25": 316312,
+      "complete_required_rows": 316312,
+      "stations": 39,
+      "first_local": "2022-01-01 00:00:00",
+      "last_local": "2022-12-31 23:00:00",
+      "event_rows": 18745,
+      "event_valid_pm25": 18745,
+      "stations_with_75pct_event_pm25": 36
+    },
+    {
+      "year": 2023,
+      "rows": 309748,
+      "valid_pm25": 309748,
+      "complete_required_rows": 309748,
+      "stations": 39,
+      "first_local": "2023-01-01 00:00:00",
+      "last_local": "2023-12-31 23:00:00",
+      "event_rows": 18871,
+      "event_valid_pm25": 18871,
+      "stations_with_75pct_event_pm25": 37
+    },
+    {
+      "year": 2024,
+      "rows": 317627,
+      "valid_pm25": 317627,
+      "complete_required_rows": 158994,
+      "stations": 39,
+      "first_local": "2024-01-01 00:00:00",
+      "last_local": "2024-12-31 23:00:00",
+      "event_rows": 19214,
+      "event_valid_pm25": 19214,
+      "stations_with_75pct_event_pm25": 37
+    },
+    {
+      "year": 2025,
+      "rows": 133917,
+      "valid_pm25": 133917,
+      "complete_required_rows": 133917,
+      "stations": 39,
+      "first_local": "2025-04-01 00:00:00",
+      "last_local": "2025-09-01 23:00:00",
+      "event_rows": 0,
+      "event_valid_pm25": 0,
+      "stations_with_75pct_event_pm25": 0
+    }
+  ],
+  "event_inventory_window": "14 days before through 7 days after, local midnight anchor",
+  "candidate_burst_window": "1 day before through 2 days after; design parameter requiring sensitivity checks",
+  "limitations": [
+    "2025 XKDR Delhi observations do not cover Diwali; use separately attributed OpenCity holdout.",
+    "UTC time is a record bin; observation_time_utc preserves actual +30 minute timing. Source averaging interval and publication latency are unknown.",
+    "Weather sampled at bin start, up to 30 minutes before observation timestamp; ERA5 grid weather is not issued forecasts.",
+    "Missing hours/labels are not imputed; feature builder must reindex each station before lagging.",
+    "Event inventory contains no residual label: model teammate must supply strictly out-of-time baseline predictions.",
+    "No verified fire, restriction-policy or ward features are included. Station records are not independent festivals."
+  ]
+}

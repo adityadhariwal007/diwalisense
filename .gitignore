@@ -15,5 +15,12 @@ data/raw/*
 data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
+# Versioned multi-year training inputs and provenance.
+!data/processed/multiyear_training/
+data/processed/multiyear_training/*
+!data/processed/multiyear_training/*.parquet
+!data/processed/multiyear_training/*.csv
+!data/processed/multiyear_training/*.json
+!data/processed/multiyear_training/README.md
 artifacts/*
 !artifacts/.gitkeep

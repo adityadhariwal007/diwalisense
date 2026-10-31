@@ -1,0 +1,66 @@
+{
+  "development": [
+    {
+      "year": 2017,
+      "rows": 73906,
+      "station_hours_unique": true,
+      "feature_interface_passed": true
+    },
+    {
+      "year": 2018,
+      "rows": 268112,
+      "station_hours_unique": true,
+      "feature_interface_passed": true
+    },
+    {
+      "year": 2019,
+      "rows": 309745,
+      "station_hours_unique": true,
+      "feature_interface_passed": true
+    },
+    {
+      "year": 2020,
+      "rows": 300236,
+      "station_hours_unique": true,
+      "feature_interface_passed": true
+    },
+    {
+      "year": 2021,
+      "rows": 310648,
+      "station_hours_unique": true,
+      "feature_interface_passed": true
+    },
+    {
+      "year": 2022,
+      "rows": 316312,
+      "station_hours_unique": true,
+      "feature_interface_passed": true
+    },
+    {
+      "year": 2023,
+      "rows": 309748,
+      "station_hours_unique": true,
+      "feature_interface_passed": true
+    },
+    {
+      "year": 2024,
+      "rows": 317627,
+      "station_hours_unique": true,
+      "feature_interface_passed": true
+    }
+  ],
+  "holdout": {
+    "rows": 341640,
+    "valid_pm25": 318620,
+    "event_rows": 20592,
+    "event_valid_pm25": 19571,
+    "stations": 39,
+    "timestamp_interpretation": "provisional; no model tuning on this data"
+  },
+  "cross_source_2024": {
+    "pairs": 313635,
+    "within_0_01_ug_m3": 313635,
+    "mae": 0.0007757717304085467,
+    "scope": "Supports IST interpretation for 2024. Does not certify 2025 timestamps."
+  }
+}
