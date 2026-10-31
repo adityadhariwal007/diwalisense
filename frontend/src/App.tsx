@@ -1,34 +1,26 @@
 import { useEffect, useRef, useState } from 'react';
 import { videoOpacity } from './video-loop';
+import ForecastPanel from './ForecastPanel';
 
 type Panel = 'forecast' | 'approach' | 'sources' | 'team';
 
-const content: Record<Panel, { title: string; intro: string; details: [string, string][] }> = {
-  forecast: {
-    title: 'A clearer forecast is next.',
-    intro: 'Our Delhi-NCR forecast is under development. No validated predictions are available yet.',
-    details: [
-      ['Before, during, after', 'The planned forecast follows pollution across the Diwali period.'],
-      ['An estimate, with a range', 'Areas without sensors will show estimates, with uncertainty clearly labelled.'],
-      ['Our next milestone', 'Train a baseline on real data and compare it with a simple persistence forecast.'],
-    ],
-  },
+const content: Record<Exclude<Panel, 'forecast'>, { title: string; intro: string; details: [string, string][] }> = {
   approach: {
     title: 'Two models. One clearer picture.',
     intro: 'Separate the everyday background from the extra pollution around Diwali.',
     details: [
       ['Background pollution', 'Recent PM2.5, wind and weather help estimate the usual pollution level.'],
-      ['The Diwali increase', 'Past festival periods help estimate an additional increase. This does not prove that crackers alone caused it.'],
-      ['A local view', 'Combine the forecasts, estimate neighborhood differences and show the uncertainty.'],
+      ['The Diwali increase', 'The 2024 event helps estimate an additional increase. One training Diwali is limited evidence; this does not prove that crackers alone caused it.'],
+      ['A local view', 'The working build forecasts monitoring stations with uncertainty. Ward estimates remain a planned extension.'],
     ],
   },
   sources: {
     title: 'Grounded in environmental data.',
-    intro: 'Planned inputs for our Delhi-NCR pilot. Access and historical coverage still need verification.',
+    intro: 'The working model uses the repository’s audited Delhi 2024–2025 data package.',
     details: [
-      ['Air & weather', 'OpenAQ / CPCB pollution records and Open-Meteo weather.'],
-      ['Regional context', 'NASA FIRMS fire detections and OpenStreetMap roads and land use.'],
-      ['Festival context', 'A manually checked Diwali and cracker-ban calendar.'],
+      ['Air & weather', 'OpenCity station observations and historical reanalysis weather. Reporting latency and timestamp assumptions remain limitations.'],
+      ['Earlier history', '2017–2020 Kaggle records are staged but excluded until station mapping and timezone checks are complete.'],
+      ['Planned inputs', 'Regional fires, roads, ban context and ward estimates are not part of this working model yet.'],
     ],
   },
   team: {
@@ -36,7 +28,7 @@ const content: Record<Panel, { title: string; intro: string; details: [string, s
     intro: 'Aditya, Maanvik, Palakshi and Manveer. A student team at RootAccess.',
     details: [
       ['Our focus', 'Make local pollution forecasts understandable, including what we do not know.'],
-      ['Current stage', 'Architecture and code scaffold. Model training and forecast validation are still ahead.'],
+      ['Current stage', 'A trained historical model, measured holdout comparisons, API and interactive replay dashboard.'],
     ],
   },
 };
@@ -143,15 +135,17 @@ export default function App() {
     </section>
     <footer className="hero-footer relative z-10 mx-auto flex w-full max-w-7xl justify-between gap-5 px-8">
       <p>For the places we call home.</p>
-      <p>Neighborhood estimates. Never sensor measurements.</p>
+      <p>Station estimates. Not live sensor measurements.</p>
     </footer>
-    <dialog ref={dialog} className="info-dialog" aria-labelledby="dialog-title" onClick={event => { if (event.target === dialog.current) dialog.current.close(); }}>
+    <dialog ref={dialog} className={`info-dialog ${panel === 'forecast' ? 'forecast-dialog' : ''}`} aria-labelledby="dialog-title" onClick={event => { if (event.target === dialog.current) dialog.current.close(); }}>
       <button className="dialog-close" onClick={() => dialog.current?.close()} aria-label="Close panel">×</button>
-      <p className="dialog-kicker">DiwaliSense / {panel === 'forecast' ? 'Prototype' : panel === 'approach' ? 'Our approach' : panel === 'sources' ? 'Data sources' : 'Team Clauders'}</p>
+      {panel === 'forecast' ? <ForecastPanel /> : <>
+      <p className="dialog-kicker">DiwaliSense / {panel === 'approach' ? 'Our approach' : panel === 'sources' ? 'Data sources' : 'Team Clauders'}</p>
       <h2 id="dialog-title" className="font-display">{content[panel].title}</h2>
       <p className="dialog-intro">{content[panel].intro}</p>
       <dl>{content[panel].details.map(([title, description]) => <div key={title}><dt>{title}</dt><dd>{description}</dd></div>)}</dl>
       <button className="dialog-return" onClick={() => dialog.current?.close()}>Back to the view</button>
+      </>}
     </dialog>
   </main>;
 }

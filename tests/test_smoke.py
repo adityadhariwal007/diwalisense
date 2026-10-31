@@ -29,11 +29,16 @@ def test_features_do_not_bridge_gaps_or_stations():
         build_features(pd.concat([frame, frame.iloc[:1]]))
 
 
-def test_dummy_api():
-    response = TestClient(app).get("/forecast", params={"ward": "Test"})
-    assert response.status_code == 200
-    assert response.json()["is_dummy"] is True
-    assert response.json()["ward"] == "Test"
+def test_api_requires_trained_model(monkeypatch, tmp_path):
+    from api import main
+    main.model_bundle.cache_clear()
+    monkeypatch.setattr(main, 'MODEL_PATH', tmp_path / 'missing.joblib')
+    try:
+        response = TestClient(app).get('/forecast')
+        assert response.status_code == 503
+        assert 'Model not trained' in response.json()['detail']
+    finally:
+        main.model_bundle.cache_clear()
 
 
 def test_weather_units_and_missing_height():

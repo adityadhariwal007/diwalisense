@@ -6,7 +6,7 @@ Built for **RootAccess**, an environment and sustainability hackathon.
 
 [Round 1 presentation: Team Clauders](output/DiwaliSense-Clauders-Round1.pptx) — five slides with speaker notes, following the supplied template.
 
-**Status: Round 1 scaffold.** Ingestion adapters, hourly features, quantile-training skeletons, a dummy API, and a dashboard placeholder are implemented. There are no trained operational forecasts, validated ward estimates, or measured accuracy results yet.
+**Status: Round 2 working historical MVP.** The React website connects to a trained LightGBM background + event-residual model through FastAPI. It replays six-hour-ahead predictions on the 2025 holdout, using 2024 training/calibration data. Real measured comparisons and 39 station-holdout results are recorded in [docs/measured_metrics.json](docs/measured_metrics.json). This is not a live forecast or a validated ward model. See [Round 2 runbook and pitch draft](docs/round2.md).
 
 ## The problem
 
@@ -30,12 +30,12 @@ The burst is an **event-associated residual**, not proof of pollution caused sol
 
 | Feature | Current status and purpose |
 |---|---|
-| Baseline forecast | Training skeleton implemented; real training/evaluation TODO. |
-| Burst model | Residual quantile trainer implemented; event dataset and out-of-time baseline predictions TODO. |
+| Baseline forecast | Trained on non-event 2024 records for six-hour-ahead historical prediction. |
+| Burst model | Trained on 2024 event residuals from a pre-October baseline; only one independent training Diwali. |
 | Ward estimates | TODO: interpolation, spatial features, and station-holdout evaluation. |
-| Uncertainty | P10/P50/P90 training skeleton implemented; total-range calibration and coverage measurement TODO. |
-| Action layer | TODO: lower-exposure windows, school/health awareness, and officer priorities. |
-| API and dashboard | `/forecast` returns labeled dummy values; Streamlit shows a placeholder. |
+| Uncertainty | Quantile estimates with December 2024 interval expansion; measured Diwali coverage is weak (51.9%). |
+| Action layer | Officer view ranks station-area estimates for human review. Health advice and safe cracker-use windows are not provided. |
+| API and dashboard | FastAPI serves real model output to the React replay dashboard. Streamlit remains a placeholder. |
 
 Future map values must distinguish **measurements**, **station forecasts**, and **ward estimates**. No time window will be described as safe for bursting crackers. Guidance will not override restrictions or provide medical instructions. Municipal rankings require human review and do not prove intervention effectiveness.
 
@@ -92,26 +92,33 @@ Access routes are documented below. Authenticated downloads and complete Delhi-N
 | Validation | scikit-learn, pytest | Planned metrics and current smoke tests |
 | Spatial | GeoPandas | Planned joins and ward estimates |
 | Backend | FastAPI, Uvicorn | Forecast endpoint |
-| Frontend | Streamlit | Dashboard scaffold; Leaflet integration TODO |
+| Frontend | React, Vite, TypeScript, Tailwind | Historical replay, uncertainty chart, resident/officer views; Streamlit remains a scaffold |
 | Storage | Local CSV / GeoJSON / artifacts | Offline demo and reproducible inputs |
 | Collaboration | Git, GitHub, Mermaid | Source control and architecture |
 
 ## Validation plan
 
 - **Time split:** train through 2024; tune on earlier rolling time folds; keep Diwali 2025 untouched for final evaluation. Target history is 2017–2025, subject to coverage.
-- **Station holdout:** exclude one station from training, interpolation, calibration, and feature construction; repeat across eligible stations while preserving the time split.
+- **Station holdout:** the current 39-station experiment excludes each station from fitting and calibration, but uses that station’s prior sensor readings at inference. This measures station transfer with observations; it does **not** validate unsensored wards. A future spatial experiment must also exclude held-out sensor inputs.
 - **Persistence baseline:** carry the latest available PM2.5 forward; compare identical horizons and evaluation records.
 - **Leakage control:** use only information available at forecast issue time, including reporting delays. Fit cleaning/imputation on training data. Build burst targets from out-of-time baseline predictions.
 - **Weather distinction:** label reanalysis-based experiments retrospective; use archived issued forecasts for operational evaluation when available.
 - **Metrics:** MAE and RMSE in µg/m³; PM2.5 sub-index category accuracy using documented CPCB 24-hour averaging/completeness rules. This is not full multi-pollutant AQI accuracy.
 - **Uncertainty:** report quantile loss, interval coverage, width, and sample counts. Adding component quantiles does not automatically produce valid total ranges.
 
-| Evaluation | MAE | RMSE | PM2.5 category accuracy |
+Current replay: Jan–Nov 2024 fitting, December 2024 interval calibration, 2025 test. Six hours before the target hour starts; issue times assume source bins are available at their recorded end. Same test records and horizon for each comparison.
+
+| Evaluation | Rows | MAE (µg/m³) | RMSE (µg/m³) |
 |---|---|---|---|
-| Persistence, Diwali 2025 | [TO BE MEASURED] | [TO BE MEASURED] | [TO BE MEASURED] |
-| Baseline only, Diwali 2025 | [TO BE MEASURED] | [TO BE MEASURED] | [TO BE MEASURED] |
-| Baseline + burst, Diwali 2025 | [TO BE MEASURED] | [TO BE MEASURED] | [TO BE MEASURED] |
-| Full pipeline, station holdout | [TO BE MEASURED] | [TO BE MEASURED] | [TO BE MEASURED] |
+| Persistence, all 2025 test times | 50,010 | 43.819 | 71.830 |
+| Baseline + burst, all 2025 test times | 50,010 | 28.365 | 48.063 |
+| Persistence, Diwali 2025 event window | 389 | 148.319 | 208.602 |
+| Baseline only, Diwali 2025 event window | 389 | 81.491 | 135.977 |
+| Baseline + burst, Diwali 2025 event window | 389 | 86.409 | 125.418 |
+
+The combined model improves on persistence in this replay. The burst component has **worse Diwali MAE** than the baseline alone, so it is experimental. Expanded interval coverage is **88.45% overall**, but only **51.93% during the event window**; do not describe the event range as reliable. Event window: 24 hours before to 48 hours after 18:00 IST on Diwali. Many station rows represent the same festival, not independent Diwalis.
+
+**AQI-category accuracy: [TO BE MEASURED].** The model predicts hourly PM2.5, so a valid 24-hour AQI-category evaluation is not implemented. Per-station holdout results are in `docs/measured_metrics.json`.
 
 ## Known limitations and honest risks
 
@@ -177,8 +184,9 @@ not run the app. For production output, run `npm run build`; `npm test` checks
 the video fade boundaries.
 
 The page adapts the supplied cinematic reference to DiwaliSense. Its navigation
-and forecast CTA open accessible information panels. The forecast panel clearly
-states that predictions are not available; it is not connected to FastAPI.
+and forecast CTA open accessible panels. The forecast panel connects to FastAPI
+for historical predictions, uncertainty, measured validation, and station priorities.
+Run the Python API on port 8000 alongside Vite for development.
 The supplied nature video, fallback image, and fonts are bundled locally for
 offline use after dependencies are installed. Motion can be paused and respects
 the device's reduced-motion setting. The video uses a manual fade loop, with a
@@ -187,13 +195,13 @@ this single-screen page uses CSS transitions rather than adding scroll libraries
 The supplied video remains a third-party asset; redistribution rights have not
 been verified.
 
-`GET /forecast?ward=Demo` returns **dummy values**, marked `is_dummy: true`; they are not predictions. The dashboard is a placeholder and is not yet connected to the endpoint.
+`GET /forecast?station=site_5024&date=2025-10-20&hour=23` returns trained-model output, marked `is_dummy: false` and `is_live: false`. Run `python -m src.models.hourly` once after installing dependencies. React is the connected dashboard; Streamlit remains a placeholder. Read `docs/round2.md` for the complete offline demo setup.
 
 Code is organized under `src/ingestion/`, `src/features/`, `src/models/`, `src/spatial/`, `src/actions/`, and `src/validation/`. Data belongs in `data/raw/` and `data/processed/`, with generated model outputs in `artifacts/`. Spatial, action, and validation packages contain TODOs. Download dependencies and inputs before the offline event; local map geometry and cached forecast display remain TODO.
 
 ### Current checks
 
-Six offline checks passed for feature gaps, dummy API labeling, and mocked ingestion. The model smoke test failed locally because `libomp` was unavailable. Authenticated data downloads, full dependency installation, live dashboard behavior, model accuracy, and calibration have not been verified. Smoke tests are not forecast-performance results.
+Ten Python checks pass, including feature availability, gap handling, trained-model responses and invalid inputs. The frontend build and video-loop unit test pass. LightGBM now loads after installing `libomp`. Model performance comes from the measured historical holdouts above, not the smoke tests. Live reporting latency, operational forecasts, unsensored wards and AQI evaluation remain unverified.
 
 ## 48-hour roadmap
 
@@ -207,10 +215,11 @@ Six offline checks passed for feature gaps, dummy API labeling, and mocked inges
 ### Round 2 — hours 2–32
 
 - [ ] Cache usable station and weather data; review units, flags, and gaps.
-- [ ] Implement persistence, then train and evaluate the baseline.
-- [ ] Add the burst model only if event data supports it.
-- [ ] Evaluate quantiles and station holdouts; record measured metrics.
-- [ ] Implement ward estimates and connect the dashboard to the API.
+- [x] Implement persistence, then train and evaluate the baseline.
+- [x] Train an experimental 2024 event-residual model; record its mixed results.
+- [x] Evaluate intervals and 39 station holdouts; record measured metrics.
+- [x] Connect the React dashboard to the trained-model API.
+- [ ] Implement and validate ward estimates.
 - [ ] Verify offline operation and missing-data behavior.
 
 ### Round 3 — hours 32–48

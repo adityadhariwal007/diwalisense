@@ -1,0 +1,17 @@
+{
+  "development_2024.parquet": {
+    "actual_sha256": "b39461a9c49f6140be9f40a3a7cbf61bce56b27077ee4b957d1b869a5b7986a7",
+    "audit_sha256": "b39461a9c49f6140be9f40a3a7cbf61bce56b27077ee4b957d1b869a5b7986a7",
+    "matches": true
+  },
+  "holdout_2025.parquet": {
+    "actual_sha256": "a39259d86cef733d65a3d700d44afe49daf0d1632f8ef465044ebef559ddd60b",
+    "audit_sha256": "a39259d86cef733d65a3d700d44afe49daf0d1632f8ef465044ebef559ddd60b",
+    "matches": true
+  },
+  "stations.csv": {
+    "actual_sha256": "219a47366ba82dba627a5934d2613c5d769ec2b2dd3688526f8bf06d1369ef72",
+    "audit_sha256": "4bd57adfdf4847b67e41db310b4f04357dbfdd57fb0cc1fe9d519d006c5c0584",
+    "matches": false
+  }
+}

@@ -1,0 +1,611 @@
+{
+  "mode": "historical_replay",
+  "frequency": "hourly targets on a six-hour UTC schedule",
+  "horizon_hours": 6,
+  "train_period": "2024 January\u2013November",
+  "calibration_period": "December 2024",
+  "test_year": 2025,
+  "frozen_model_sha256": "bab452b120be2cb91b945b6933833bb64f1493ab51a07cdcd4a07dfa7ddeb672",
+  "training_rows": 45629,
+  "calibration_rows": 4383,
+  "test_rows": 50010,
+  "stations": [
+    "site_103",
+    "site_104",
+    "site_105",
+    "site_106",
+    "site_107",
+    "site_108",
+    "site_109",
+    "site_113",
+    "site_114",
+    "site_115",
+    "site_117",
+    "site_118",
+    "site_119",
+    "site_122",
+    "site_124",
+    "site_125",
+    "site_1420",
+    "site_1421",
+    "site_1422",
+    "site_1423",
+    "site_1424",
+    "site_1425",
+    "site_1426",
+    "site_1427",
+    "site_1428",
+    "site_1429",
+    "site_1430",
+    "site_1431",
+    "site_1432",
+    "site_1434",
+    "site_1435",
+    "site_1560",
+    "site_1561",
+    "site_1562",
+    "site_1563",
+    "site_301",
+    "site_5024",
+    "site_5393",
+    "site_5395"
+  ],
+  "event_training_rows": 417,
+  "independent_training_diwalis": 1,
+  "all_test": {
+    "model": {
+      "n": 50010,
+      "mae": 28.365,
+      "rmse": 48.063
+    },
+    "persistence": {
+      "n": 50010,
+      "mae": 43.819,
+      "rmse": 71.83
+    },
+    "interval_coverage": 0.8845,
+    "baseline_only": {
+      "n": 50010,
+      "mae": 28.342,
+      "rmse": 48.3
+    }
+  },
+  "diwali_test": {
+    "model": {
+      "n": 389,
+      "mae": 86.409,
+      "rmse": 125.418
+    },
+    "persistence": {
+      "n": 389,
+      "mae": 148.319,
+      "rmse": 208.602
+    },
+    "interval_coverage": 0.5193,
+    "baseline_only": {
+      "n": 389,
+      "mae": 81.491,
+      "rmse": 135.977
+    }
+  },
+  "aqi_category_accuracy": "[TO BE MEASURED: hourly target is not 24-hour AQI]",
+  "leave_one_station_out": {
+    "site_103": {
+      "model": {
+        "n": 1350,
+        "mae": 26.407,
+        "rmse": 43.166
+      },
+      "persistence": {
+        "n": 1350,
+        "mae": 40.757,
+        "rmse": 67.065
+      },
+      "interval_coverage": 0.8296
+    },
+    "site_104": {
+      "model": {
+        "n": 1267,
+        "mae": 32.785,
+        "rmse": 53.336
+      },
+      "persistence": {
+        "n": 1267,
+        "mae": 45.408,
+        "rmse": 75.074
+      },
+      "interval_coverage": 0.8366
+    },
+    "site_105": {
+      "model": {
+        "n": 1363,
+        "mae": 30.952,
+        "rmse": 51.269
+      },
+      "persistence": {
+        "n": 1363,
+        "mae": 46.5,
+        "rmse": 73.732
+      },
+      "interval_coverage": 0.8643
+    },
+    "site_106": {
+      "model": {
+        "n": 1226,
+        "mae": 25.119,
+        "rmse": 39.704
+      },
+      "persistence": {
+        "n": 1226,
+        "mae": 34.454,
+        "rmse": 52.492
+      },
+      "interval_coverage": 0.8597
+    },
+    "site_107": {
+      "model": {
+        "n": 1328,
+        "mae": 29.523,
+        "rmse": 44.808
+      },
+      "persistence": {
+        "n": 1328,
+        "mae": 41.491,
+        "rmse": 63.114
+      },
+      "interval_coverage": 0.7914
+    },
+    "site_108": {
+      "model": {
+        "n": 1317,
+        "mae": 29.354,
+        "rmse": 50.768
+      },
+      "persistence": {
+        "n": 1317,
+        "mae": 37.274,
+        "rmse": 64.57
+      },
+      "interval_coverage": 0.8155
+    },
+    "site_109": {
+      "model": {
+        "n": 1157,
+        "mae": 25.789,
+        "rmse": 39.143
+      },
+      "persistence": {
+        "n": 1157,
+        "mae": 34.121,
+        "rmse": 52.396
+      },
+      "interval_coverage": 0.8453
+    },
+    "site_113": {
+      "model": {
+        "n": 1205,
+        "mae": 26.977,
+        "rmse": 43.391
+      },
+      "persistence": {
+        "n": 1205,
+        "mae": 27.89,
+        "rmse": 47.098
+      },
+      "interval_coverage": 0.8822
+    },
+    "site_114": {
+      "model": {
+        "n": 920,
+        "mae": 24.105,
+        "rmse": 42.054
+      },
+      "persistence": {
+        "n": 920,
+        "mae": 26.369,
+        "rmse": 47.463
+      },
+      "interval_coverage": 0.8859
+    },
+    "site_115": {
+      "model": {
+        "n": 1252,
+        "mae": 22.041,
+        "rmse": 33.996
+      },
+      "persistence": {
+        "n": 1252,
+        "mae": 27.666,
+        "rmse": 45.965
+      },
+      "interval_coverage": 0.8914
+    },
+    "site_117": {
+      "model": {
+        "n": 1299,
+        "mae": 28.376,
+        "rmse": 46.811
+      },
+      "persistence": {
+        "n": 1299,
+        "mae": 44.141,
+        "rmse": 71.642
+      },
+      "interval_coverage": 0.8853
+    },
+    "site_118": {
+      "model": {
+        "n": 1277,
+        "mae": 25.082,
+        "rmse": 46.325
+      },
+      "persistence": {
+        "n": 1277,
+        "mae": 36.354,
+        "rmse": 68.569
+      },
+      "interval_coverage": 0.9099
+    },
+    "site_119": {
+      "model": {
+        "n": 1348,
+        "mae": 26.047,
+        "rmse": 44.104
+      },
+      "persistence": {
+        "n": 1348,
+        "mae": 39.842,
+        "rmse": 62.843
+      },
+      "interval_coverage": 0.8887
+    },
+    "site_122": {
+      "model": {
+        "n": 1079,
+        "mae": 28.923,
+        "rmse": 44.336
+      },
+      "persistence": {
+        "n": 1079,
+        "mae": 43.365,
+        "rmse": 65.84
+      },
+      "interval_coverage": 0.8341
+    },
+    "site_124": {
+      "model": {
+        "n": 1289,
+        "mae": 31.164,
+        "rmse": 52.406
+      },
+      "persistence": {
+        "n": 1289,
+        "mae": 52.573,
+        "rmse": 85.647
+      },
+      "interval_coverage": 0.8829
+    },
+    "site_125": {
+      "model": {
+        "n": 1226,
+        "mae": 34.382,
+        "rmse": 53.879
+      },
+      "persistence": {
+        "n": 1226,
+        "mae": 52.466,
+        "rmse": 83.438
+      },
+      "interval_coverage": 0.8564
+    },
+    "site_1420": {
+      "model": {
+        "n": 1378,
+        "mae": 33.095,
+        "rmse": 56.582
+      },
+      "persistence": {
+        "n": 1378,
+        "mae": 53.731,
+        "rmse": 84.944
+      },
+      "interval_coverage": 0.8418
+    },
+    "site_1421": {
+      "model": {
+        "n": 1376,
+        "mae": 25.941,
+        "rmse": 42.872
+      },
+      "persistence": {
+        "n": 1376,
+        "mae": 41.177,
+        "rmse": 65.256
+      },
+      "interval_coverage": 0.8837
+    },
+    "site_1422": {
+      "model": {
+        "n": 1394,
+        "mae": 27.19,
+        "rmse": 45.215
+      },
+      "persistence": {
+        "n": 1394,
+        "mae": 43.153,
+        "rmse": 66.446
+      },
+      "interval_coverage": 0.8824
+    },
+    "site_1423": {
+      "model": {
+        "n": 1217,
+        "mae": 35.283,
+        "rmse": 58.421
+      },
+      "persistence": {
+        "n": 1217,
+        "mae": 56.96,
+        "rmse": 90.736
+      },
+      "interval_coverage": 0.8718
+    },
+    "site_1424": {
+      "model": {
+        "n": 1340,
+        "mae": 25.314,
+        "rmse": 40.74
+      },
+      "persistence": {
+        "n": 1340,
+        "mae": 38.741,
+        "rmse": 61.259
+      },
+      "interval_coverage": 0.8597
+    },
+    "site_1425": {
+      "model": {
+        "n": 1326,
+        "mae": 26.916,
+        "rmse": 41.933
+      },
+      "persistence": {
+        "n": 1326,
+        "mae": 39.407,
+        "rmse": 60.02
+      },
+      "interval_coverage": 0.8673
+    },
+    "site_1426": {
+      "model": {
+        "n": 1427,
+        "mae": 32.623,
+        "rmse": 55.071
+      },
+      "persistence": {
+        "n": 1427,
+        "mae": 53.665,
+        "rmse": 85.974
+      },
+      "interval_coverage": 0.8732
+    },
+    "site_1427": {
+      "model": {
+        "n": 1273,
+        "mae": 24.249,
+        "rmse": 43.034
+      },
+      "persistence": {
+        "n": 1273,
+        "mae": 36.23,
+        "rmse": 59.746
+      },
+      "interval_coverage": 0.9073
+    },
+    "site_1428": {
+      "model": {
+        "n": 1351,
+        "mae": 26.259,
+        "rmse": 43.192
+      },
+      "persistence": {
+        "n": 1351,
+        "mae": 40.709,
+        "rmse": 64.123
+      },
+      "interval_coverage": 0.886
+    },
+    "site_1429": {
+      "model": {
+        "n": 1396,
+        "mae": 29.072,
+        "rmse": 48.49
+      },
+      "persistence": {
+        "n": 1396,
+        "mae": 45.702,
+        "rmse": 73.356
+      },
+      "interval_coverage": 0.8818
+    },
+    "site_1430": {
+      "model": {
+        "n": 1381,
+        "mae": 33.674,
+        "rmse": 57.792
+      },
+      "persistence": {
+        "n": 1381,
+        "mae": 56.313,
+        "rmse": 88.58
+      },
+      "interval_coverage": 0.861
+    },
+    "site_1431": {
+      "model": {
+        "n": 1393,
+        "mae": 28.288,
+        "rmse": 47.285
+      },
+      "persistence": {
+        "n": 1393,
+        "mae": 44.791,
+        "rmse": 72.229
+      },
+      "interval_coverage": 0.8722
+    },
+    "site_1432": {
+      "model": {
+        "n": 1353,
+        "mae": 29.746,
+        "rmse": 49.396
+      },
+      "persistence": {
+        "n": 1353,
+        "mae": 47.196,
+        "rmse": 73.486
+      },
+      "interval_coverage": 0.8699
+    },
+    "site_1434": {
+      "model": {
+        "n": 1400,
+        "mae": 34.619,
+        "rmse": 59.207
+      },
+      "persistence": {
+        "n": 1400,
+        "mae": 57.318,
+        "rmse": 90.445
+      },
+      "interval_coverage": 0.8671
+    },
+    "site_1435": {
+      "model": {
+        "n": 1363,
+        "mae": 36.478,
+        "rmse": 62.734
+      },
+      "persistence": {
+        "n": 1363,
+        "mae": 55.349,
+        "rmse": 93.504
+      },
+      "interval_coverage": 0.8386
+    },
+    "site_1560": {
+      "model": {
+        "n": 1367,
+        "mae": 34.167,
+        "rmse": 59.64
+      },
+      "persistence": {
+        "n": 1367,
+        "mae": 58.767,
+        "rmse": 93.396
+      },
+      "interval_coverage": 0.8683
+    },
+    "site_1561": {
+      "model": {
+        "n": 1351,
+        "mae": 35.156,
+        "rmse": 58.87
+      },
+      "persistence": {
+        "n": 1351,
+        "mae": 59.353,
+        "rmse": 93.44
+      },
+      "interval_coverage": 0.8779
+    },
+    "site_1562": {
+      "model": {
+        "n": 1322,
+        "mae": 21.717,
+        "rmse": 37.256
+      },
+      "persistence": {
+        "n": 1322,
+        "mae": 30.263,
+        "rmse": 50.951
+      },
+      "interval_coverage": 0.9039
+    },
+    "site_1563": {
+      "model": {
+        "n": 1364,
+        "mae": 24.5,
+        "rmse": 39.323
+      },
+      "persistence": {
+        "n": 1364,
+        "mae": 33.81,
+        "rmse": 52.685
+      },
+      "interval_coverage": 0.871
+    },
+    "site_301": {
+      "model": {
+        "n": 1192,
+        "mae": 39.026,
+        "rmse": 62.306
+      },
+      "persistence": {
+        "n": 1192,
+        "mae": 59.53,
+        "rmse": 93.512
+      },
+      "interval_coverage": 0.8599
+    },
+    "site_5024": {
+      "model": {
+        "n": 1328,
+        "mae": 29.455,
+        "rmse": 49.813
+      },
+      "persistence": {
+        "n": 1328,
+        "mae": 49.818,
+        "rmse": 77.12
+      },
+      "interval_coverage": 0.869
+    },
+    "site_5393": {
+      "model": {
+        "n": 867,
+        "mae": 23.218,
+        "rmse": 39.219
+      },
+      "persistence": {
+        "n": 867,
+        "mae": 31.709,
+        "rmse": 57.545
+      },
+      "interval_coverage": 0.9227
+    },
+    "site_5395": {
+      "model": {
+        "n": 948,
+        "mae": 20.349,
+        "rmse": 30.99
+      },
+      "persistence": {
+        "n": 948,
+        "mae": 25.218,
+        "rmse": 35.102
+      },
+      "interval_coverage": 0.9135
+    }
+  },
+  "limitations": [
+    "Historical six-hour-ahead replay, not a live 2026 forecast.",
+    "Only one independent training Diwali (2024); stations are correlated event samples.",
+    "Historical reanalysis and assumed bin-end availability; real reporting latency unknown.",
+    "2024 timestamp interpretation supported on sampled days only; not provider-confirmed for every station/2025.",
+    "Station holdout uses that station's prior pollution readings; not validation for unsensored wards.",
+    "2017\u20132020 staging excluded until timezone and station crosswalk are resolved.",
+    "No fires, road features, ban compliance or ward downscaling in this build.",
+    "P10\u2013P90 model estimates expanded using pooled December 2024 calibration; no event-specific coverage guarantee."
+  ]
+}

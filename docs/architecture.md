@@ -1,6 +1,6 @@
 # System architecture
 
-Planned architecture; implementation status is documented in the README.
+Full planned architecture. The working Round 2 subset uses the pulled 2024–2025 package, issue-time features, background/residual LightGBM, FastAPI and React. Ward downscaling, fires and policy inputs remain planned. See [Round 2 runbook](round2.md) and the README for measured results.
 
 ```mermaid
 flowchart TD
