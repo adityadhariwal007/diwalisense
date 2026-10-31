@@ -25,12 +25,9 @@ button:focus-visible, a:focus-visible { outline: 2px solid #356347; outline-offs
 .desktop-nav button { color: #6f6f6f; transition: color 160ms; }
 .desktop-nav button:hover { color: #000; }
 .hero-content { padding-top: calc(8rem - 75px); }
-.pilot-note { display: flex; align-items: center; gap: 9px; margin: 12px 0 27px; font-size: 12px; color: #5b635d; }
-.pilot-note span { width: 6px; height: 6px; background: #69856c; border-radius: 50%; }
-h1 { line-height: 0.95; letter-spacing: -2.46px; }
+h1 { line-height: 1.03; letter-spacing: -2.46px; }
 .hero-cta { display: flex; align-items: center; gap: 28px; box-shadow: 0 6px 20px #0000000c; }
 .hero-cta span { font-size: 22px; line-height: 1; }
-.prototype-note { font-size: 10px; color: #595959; margin-top: 17px; }
 .video-stage { inset: auto 0 0 0; top: 300px; background: url('/hero-poster.jpg') center / cover; }
 .video-stage video { object-position: center 55%; }
 .video-wash { background: linear-gradient(180deg, #ffffffd9 0%, #ffffff52 23%, transparent 60%, #ffffff38 100%); }
@@ -48,7 +45,6 @@ h1 { line-height: 0.95; letter-spacing: -2.46px; }
 .info-dialog dt { font-size: 13px; font-weight: 500; margin-bottom: 5px; }
 .info-dialog dd { font-size: 13px; line-height: 1.7; color: #6f6f6f; }
 .dialog-return { font-size: 13px; border-bottom: 1px solid #000; padding-bottom: 4px; margin-top: 32px; }
-@media (min-width: 1440px) { .hero-content h1 { font-size: 112px; } }
 @media (max-width: 900px) { .desktop-nav { gap: 20px; } .nav-cta { padding-inline: 18px; } }
 @media (max-width: 767px) {
   .hero-shell { min-height: max(780px, 100svh); }
@@ -56,11 +52,10 @@ h1 { line-height: 0.95; letter-spacing: -2.46px; }
   .mobile-toggle { display: block; font-size: 13px; padding: 8px 0 8px 16px; }
   .mobile-navigation { position: absolute; z-index: 30; display: flex; flex-direction: column; gap: 22px; top: 82px; left: 16px; right: 16px; padding: 28px; border-radius: 18px; background: #ffffffed; backdrop-filter: blur(20px); box-shadow: 0 12px 50px #0001; font-size: 14px; align-items: start; }
   .hero-content { padding-top: 48px; padding-bottom: 160px; }
-  .hero-content h1 { font-size: clamp(54px, 10vw, 80px); letter-spacing: -1.6px; }
+  .hero-content h1 { font-size: clamp(44px, 8.5vw, 64px); letter-spacing: -1.2px; text-wrap: balance; }
   .hero-content > p { max-width: 360px; font-size: 14px; margin-top: 24px; }
   .hero-content > div.mt-12 { margin-top: 32px; }
   .hero-cta { padding: 17px 34px; font-size: 14px; }
-  .pilot-note { font-size: 10px; margin-top: 8px; margin-bottom: 24px; }
   .video-stage { top: 300px; }
   .hero-footer { flex-direction: column; gap: 8px; font-size: 10px; padding-bottom: 22px; }
   .motion-control { right: 28px; bottom: 85px; }

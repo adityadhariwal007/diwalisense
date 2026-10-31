@@ -131,16 +131,14 @@ export default function App() {
       <button onClick={() => open('forecast')}>Explore forecast</button>
     </div>}
     <section className="hero-content relative z-10 flex flex-col items-center justify-center px-6 pb-40 text-center" aria-labelledby="hero-title">
-      <div className="pilot-note animate-fade-rise"><span aria-hidden="true" /> A Delhi-NCR pilot, by Clauders</div>
       <h1 id="hero-title" className="font-display animate-fade-rise max-w-7xl text-5xl font-normal sm:text-7xl md:text-8xl">
-        A little clarity<br />in the <em className="text-muted">Diwali haze.</em>
+        Understanding the air<br className="desktop-break" /> before, during and after <em className="text-muted">Diwali.</em>
       </h1>
       <p className="animate-fade-rise-delay mt-8 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-        Understanding the air before, during and after Diwali.<br className="desktop-break" /> Local pollution forecasts, with the uncertainty in plain sight.
+        Local pollution forecasts, with the uncertainty in plain sight.
       </p>
       <div className="animate-fade-rise-delay-2 mt-12">
         <button className="hero-cta rounded-full bg-black px-14 py-5 text-base text-white transition-transform hover:scale-[1.03]" onClick={() => open('forecast')}>Explore forecast <span aria-hidden="true">↗</span></button>
-        <p className="prototype-note">Student prototype. Forecasts under development.</p>
       </div>
     </section>
     <footer className="hero-footer relative z-10 mx-auto flex w-full max-w-7xl justify-between gap-5 px-8">
