@@ -63,12 +63,14 @@ Diwali baseline-only MAE is **81.491**, better than the combined **86.409**; the
 
 ## Two-minute demo
 
-1. Open the website and select **Explore forecast**. Say “This is a historical 2025 holdout replay, not live 2026 conditions.”
-2. Start with **Alipur**, **20 October 2025**, **23:30 IST**. Point out issue time, median, range, background and event adjustment.
-3. Click **Before Diwali** and **After Diwali**. Explain that each point has its own issue time and uses only prior bins.
-4. Show observed values on the chart for comparison, then the measured model/persistence table.
-5. Switch to **Officer** to show station-area priorities. Mention missing stations and that these are not ward measurements.
-6. Close with the weak Diwali interval coverage and single-event training limitation, then the next improvement.
+1. Open the website and select **Explore forecast**. The new comparison page asks for location. Type **Rohini** or press **Try the Delhi demo**. Device location requires the user’s permission; outside the Delhi coverage area, the app offers the demo instead of pretending to show local readings.
+2. Say “This is a 2025 comparison, not live air.” Show the before/Diwali/after cards. AQI here is a PM2.5-only sub-index estimate, not full official AQI.
+3. Switch between **Recorded** and **AI estimate**. Show the graph of PM2.5, and explain that bigger numbers mean more tiny particles in the air.
+4. Click a day and show its cigarette comparison. Say “This is a rough comparison. Week/year totals assume this same pollution every day.” Do not say the user has actually smoked these cigarettes.
+5. Open **What to do** and switch between Students, Teachers and Officers. These are general source-linked tips, not automatic regulatory orders.
+6. If mentors ask about training, open **About the data**. It links to measured model results and explains the single training Diwali, weak event intervals and lack of daily AQI validation.
+
+The prior station-picker dashboard has been replaced. Legacy `/forecast`, `/stations`, `/priorities` and `/metrics` endpoints remain for testing. New UI endpoints are `GET /locations` and `POST /comparison`.
 
 ## Four-slide pitch draft
 
@@ -76,13 +78,13 @@ Diwali baseline-only MAE is **81.491**, better than the combined **86.409**; the
 
 **Slide 2 — Working approach:** Prior pollution + weather → background model; 2024 event residual → Diwali adjustment; combined forecast → FastAPI → resident/officer dashboard. Target: six hours ahead.
 
-**Slide 3 — Working demo and evidence:** Show the replay, uncertainty chart and priority list. Report the measured comparison above. Show both annual and event-window error; do not hide weaker component or interval results.
+**Slide 3 — Working demo and evidence:** Show the location comparison, recorded/AI graph, rough cigarette comparison and guidance pages. Report the measured comparison above. Show both annual and event-window error; do not hide weaker component or interval results.
 
 **Slide 4 — Limits and next steps:** One training Diwali, reanalysis weather and uncertain reporting latency; no validated ward estimates. Resolve historical timezone/station mapping, add earlier events, improve event intervals, then validate spatial transfer.
 
 ## Suggested split for the four members
 
-- Aditya: run the website/API and lead the live demo.
+- Aditya: run the website/API and lead the demo (clearly labelled historical, not live).
 - Maanvik: explain the two-model flow, issue-time features and persistence comparison.
 - Palakshi: explain data sources, quality audits, missing data and uncertainty.
 - Manveer: prepare the four pitch slides, time the demo and confirm checkpoint timing with organizers.

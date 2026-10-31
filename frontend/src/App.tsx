@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 import { videoOpacity } from './video-loop';
-import ForecastPanel from './ForecastPanel';
+import ComparisonPage, { type LocationChoice } from './ComparisonPage';
+import GuidelinesPage, { AboutDataPage } from './GuidelinesPage';
 
-type Panel = 'forecast' | 'approach' | 'sources' | 'team';
+type Panel = 'approach' | 'sources' | 'team';
+const currentPage = () => window.location.hash.slice(1);
 
-const content: Record<Exclude<Panel, 'forecast'>, { title: string; intro: string; details: [string, string][] }> = {
+const content: Record<Panel, { title: string; intro: string; details: [string, string][] }> = {
   approach: {
     title: 'Two models. One clearer picture.',
     intro: 'Separate the everyday background from the extra pollution around Diwali.',
@@ -97,10 +99,24 @@ function BackgroundVideo() {
 }
 
 export default function App() {
-  const [panel, setPanel] = useState<Panel>('forecast');
+  const [panel, setPanel] = useState<Panel>('approach');
   const [menuOpen, setMenuOpen] = useState(false);
   const dialog = useRef<HTMLDialogElement>(null);
-  const open = (next: Panel) => { setPanel(next); setMenuOpen(false); dialog.current?.showModal(); };
+  const [page, setPage] = useState(currentPage);
+  const [chosenLocation, setChosenLocation] = useState<LocationChoice | null>(null);
+  useEffect(() => {
+    const update = () => { setPage(currentPage()); window.scrollTo(0, 0); };
+    window.addEventListener('hashchange', update);
+    return () => window.removeEventListener('hashchange', update);
+  }, []);
+  const open = (next: Panel | 'forecast' | 'guidelines') => {
+    setMenuOpen(false);
+    if (next === 'forecast' || next === 'guidelines') { window.location.hash = next === 'forecast' ? 'compare' : 'guidelines'; return; }
+    setPanel(next); dialog.current?.showModal();
+  };
+  if (page === 'compare') return <ComparisonPage location={chosenLocation} onLocationChange={setChosenLocation} />;
+  if (page === 'guidelines') return <GuidelinesPage />;
+  if (page === 'data') return <AboutDataPage />;
 
   return <main id="home" className="hero-shell relative isolate min-h-screen w-full overflow-hidden bg-background text-black">
     <BackgroundVideo />
@@ -109,7 +125,7 @@ export default function App() {
       <div className="desktop-nav flex items-center gap-8 text-sm">
         <a href="#home" aria-current="page">Home</a>
         <button onClick={() => open('approach')}>Our approach</button>
-        <button onClick={() => open('sources')}>Data sources</button>
+        <button onClick={() => open('guidelines')}>What to do</button>
         <button onClick={() => open('team')}>The team</button>
       </div>
       <button className="nav-cta rounded-full bg-black px-6 py-2.5 text-sm text-white transition-transform hover:scale-[1.03]" onClick={() => open('forecast')}>Explore forecast</button>
@@ -118,7 +134,7 @@ export default function App() {
     {menuOpen && <div id="mobile-navigation" className="mobile-navigation">
       <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
       <button onClick={() => open('approach')}>Our approach</button>
-      <button onClick={() => open('sources')}>Data sources</button>
+      <button onClick={() => open('guidelines')}>What to do</button>
       <button onClick={() => open('team')}>The team</button>
       <button onClick={() => open('forecast')}>Explore forecast</button>
     </div>}
@@ -134,18 +150,16 @@ export default function App() {
       </div>
     </section>
     <footer className="hero-footer relative z-10 mx-auto flex w-full max-w-7xl justify-between gap-5 px-8">
-      <p>For the places we call home.</p>
-      <p>Station estimates. Not live sensor measurements.</p>
+      <p>Delhi air comparison · 2025</p>
+      <a href="#data">About the data</a>
     </footer>
-    <dialog ref={dialog} className={`info-dialog ${panel === 'forecast' ? 'forecast-dialog' : ''}`} aria-labelledby="dialog-title" onClick={event => { if (event.target === dialog.current) dialog.current.close(); }}>
+    <dialog ref={dialog} className="info-dialog" aria-labelledby="dialog-title" onClick={event => { if (event.target === dialog.current) dialog.current.close(); }}>
       <button className="dialog-close" onClick={() => dialog.current?.close()} aria-label="Close panel">×</button>
-      {panel === 'forecast' ? <ForecastPanel /> : <>
       <p className="dialog-kicker">DiwaliSense / {panel === 'approach' ? 'Our approach' : panel === 'sources' ? 'Data sources' : 'Team Clauders'}</p>
       <h2 id="dialog-title" className="font-display">{content[panel].title}</h2>
       <p className="dialog-intro">{content[panel].intro}</p>
       <dl>{content[panel].details.map(([title, description]) => <div key={title}><dt>{title}</dt><dd>{description}</dd></div>)}</dl>
       <button className="dialog-return" onClick={() => dialog.current?.close()}>Back to the view</button>
-      </>}
     </dialog>
   </main>;
 }

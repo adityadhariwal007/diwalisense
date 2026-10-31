@@ -6,7 +6,7 @@ Built for **RootAccess**, an environment and sustainability hackathon.
 
 [Round 1 presentation: Team Clauders](output/DiwaliSense-Clauders-Round1.pptx) — five slides with speaker notes, following the supplied template.
 
-**Status: Round 2 working historical MVP.** The React website connects to a trained LightGBM background + event-residual model through FastAPI. It replays six-hour-ahead predictions on the 2025 holdout, using 2024 training/calibration data. Real measured comparisons and 39 station-holdout results are recorded in [docs/measured_metrics.json](docs/measured_metrics.json). This is not a live forecast or a validated ward model. See [Round 2 runbook and pitch draft](docs/round2.md).
+**Status: Round 2 working historical MVP.** The React website connects to a trained LightGBM background + event-residual model through FastAPI. It compares the days before, during and after Diwali 2025 near a selected location. Hourly AI predictions use 2024 training/calibration data. Device location or offline Delhi area search selects nearby data automatically; there is no monitoring-station selector. Real measured comparisons and 39 station-holdout results are recorded in [docs/measured_metrics.json](docs/measured_metrics.json). This is not a live forecast or a validated ward model. See [Round 2 runbook and pitch draft](docs/round2.md).
 
 ## The problem
 
@@ -118,6 +118,8 @@ Current replay: Jan–Nov 2024 fitting, December 2024 interval calibration, 2025
 
 The combined model improves on persistence in this replay. The burst component has **worse Diwali MAE** than the baseline alone, so it is experimental. Expanded interval coverage is **88.45% overall**, but only **51.93% during the event window**; do not describe the event range as reliable. Event window: 24 hours before to 48 hours after 18:00 IST on Diwali. Many station rows represent the same festival, not independent Diwalis.
 
+The comparison page now averages separate hourly predictions for each 24-hour window, ending at 23:30 IST. These daily estimates have not been evaluated as day-ahead forecasts; the error table above still describes the original hourly target schedule. At least 16 available hourly values are required. The PM2.5 sub-index is labelled as an estimate, not full official AQI; the severe band is shown as 401–500 rather than inventing an exact severe index.
+
 **AQI-category accuracy: [TO BE MEASURED].** The model predicts hourly PM2.5, so a valid 24-hour AQI-category evaluation is not implemented. Per-station holdout results are in `docs/measured_metrics.json`.
 
 ## Known limitations and honest risks
@@ -185,7 +187,8 @@ the video fade boundaries.
 
 The page adapts the supplied cinematic reference to DiwaliSense. Its navigation
 and forecast CTA open accessible panels. The forecast panel connects to FastAPI
-for historical predictions, uncertainty, measured validation, and station priorities.
+for the three-day location comparison, recorded/AI graph and rough cigarette comparison.
+Guidance and technical results live on separate pages.
 Run the Python API on port 8000 alongside Vite for development.
 The supplied nature video, fallback image, and fonts are bundled locally for
 offline use after dependencies are installed. Motion can be paused and respects
@@ -201,7 +204,7 @@ Code is organized under `src/ingestion/`, `src/features/`, `src/models/`, `src/s
 
 ### Current checks
 
-Ten Python checks pass, including feature availability, gap handling, trained-model responses and invalid inputs. The frontend build and video-loop unit test pass. LightGBM now loads after installing `libomp`. Model performance comes from the measured historical holdouts above, not the smoke tests. Live reporting latency, operational forecasts, unsensored wards and AQI evaluation remain unverified.
+Fourteen Python checks pass, including feature availability, gap handling, trained-model responses and invalid inputs. The frontend build and video-loop unit test pass. LightGBM now loads after installing `libomp`. Model performance comes from the measured historical holdouts above, not the smoke tests. Live reporting latency, operational forecasts, unsensored wards and AQI evaluation remain unverified.
 
 ## 48-hour roadmap
 
@@ -239,3 +242,15 @@ Roles will be assigned by the team.
 ## License
 
 Project code is released under the [MIT License](LICENSE). External datasets, maps, and service outputs retain their own licenses and attribution requirements.
+
+## Simple comparison and guidance pages
+
+- `/#compare`: location permission button or offline Delhi area search, automatic nearby data (within 35 km), before/Diwali/after cards, recorded/AI PM2.5 graph and day/week/year cigarette comparison. Coordinates go to the local API in a POST body, not an external geocoder or URL query. No location history is saved by the application.
+- `/#guidelines`: separate plain-language guidance for students, teachers and officers, with source links. Current official directions take precedence over this historical demo.
+- `/#data`: limitations, technical results and methods, kept off the main comparison screen.
+
+The cigarette illustration is AI-generated. Decorative smoke can be paused and is hidden for reduced-motion preferences. Numbers use daily mean PM2.5 / 22, following [Berkeley Earth's rough comparison](https://berkeleyearth.org/air-pollution-and-cigarette-equivalence/). Week/year totals assume the same daily concentration for 7/365 days. They are not future pollution forecasts, actual cigarettes smoked or personal medical-risk estimates.
+
+AQI method: [Government explanation](https://ies.gov.in/arthapedia/concept/national-air-quality-index). General exposure guidance: [WHO](https://www.who.int/news-room/questions-and-answers/item/air-pollution-personal-interventions-and-risk-communication). Officer guidance: [CAQM priorities via PIB](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2272556&lang=1&reg=3).
+
+PM2.5 sub-index calculation rounds the concentration to the nearest whole µg/m³ before applying published integer breakpoints. Only the severe AQI band is returned for concentrations above 250.

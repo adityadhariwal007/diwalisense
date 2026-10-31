@@ -11,7 +11,9 @@ BURST_FEATURES = FEATURES + ['hours_from_diwali']
 DIWALI = {2024: '2024-10-31', 2025: '2025-10-20'}
 
 
-def hourly_features(frame, stations):
+def hourly_features(frame, stations, sample_every_hours=6, require_target=True):
+    if sample_every_hours not in (1, 6):
+        raise ValueError('Supported schedules are every hour or every six hours')
     required = {'time', 'station_id', 'pm25', 'available_no_earlier_than',
                 'wind_speed_10m', 'boundary_layer_height', 'temperature_2m', 'relative_humidity_2m'}
     if not required.issubset(frame):
@@ -55,4 +57,5 @@ def hourly_features(frame, stations):
     result['season_cos'] = np.cos(2 * np.pi * local.dt.dayofyear / 365.25)
     result = result.merge(stations[['station_id', 'latitude', 'longitude']], on='station_id', how='left', validate='many_to_one')
     # Fixed six-hour schedule limits demo size; never fill missing targets or persistence inputs.
-    return result[(result.time.dt.hour % 6 == 0)].dropna(subset=['pm25', 'pm25_lag6', 'input_available_at']).reset_index(drop=True)
+    needed = ['pm25_lag6', 'input_available_at'] + (['pm25'] if require_target else [])
+    return result[(result.time.dt.hour % sample_every_hours == 0)].dropna(subset=needed).reset_index(drop=True)

@@ -5,6 +5,8 @@ import joblib
 import pandas as pd
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.staticfiles import StaticFiles
+from pydantic import BaseModel, Field
+from src.actions.comparison import nearby_station, source_hours, station_comparison
 from src.models.hourly import predict
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -99,6 +101,46 @@ def priorities(date: Date = Date(2025, 10, 20), hour: int = Query(default=23, ge
             missing.append(station)
     return {'priorities': sorted(results, key=lambda row: row['p50'], reverse=True),
             'missing_stations': missing, 'note': 'Station-area review order; not ward estimates or validated intervention recommendations.'}
+
+
+class LocationRequest(BaseModel):
+    latitude: float = Field(ge=-90, le=90, allow_inf_nan=False)
+    longitude: float = Field(ge=-180, le=180, allow_inf_nan=False)
+
+
+@app.get('/locations')
+def locations():
+    stations = model_bundle()['stations']
+    areas = []
+    seen = set()
+    for _, station in stations.dropna(subset=['latitude', 'longitude']).iterrows():
+        name = station.station_name.split(',')[0].strip()
+        if name in seen:
+            continue
+        seen.add(name)
+        areas.append({'name': name, 'latitude': float(station.latitude), 'longitude': float(station.longitude)})
+    return sorted(areas, key=lambda area: area['name'])
+
+
+@app.post('/comparison')
+def comparison(location: LocationRequest):
+    try:
+        station = nearby_station(location.latitude, location.longitude, model_bundle()['stations'], source_hours())
+    except ValueError as error:
+        raise HTTPException(404, str(error)) from error
+    return {
+        'area': station.station_name.split(',')[0], 'distance_km': round(float(station.distance_km), 1),
+        'year': 2025, 'is_live': False,
+        'phases': station_comparison(station.station_id, str(MODEL_PATH)),
+        'details': {
+            'station_name': station.station_name, 'station_id': station.station_id,
+            'aqi': 'PM2.5 sub-index estimate only; not full official AQI. Severe is shown as a band, not an invented exact number.',
+            'daily_window': '24 hours ending at 23:30 IST on the displayed date. At least 16 hourly values required.',
+            'model': 'AI daily values average separate six-hour-ahead hourly predictions, not one day-ahead forecast. Daily AQI accuracy has not been evaluated.',
+            'exposure': 'Daily PM2.5 / 22 is a rough Berkeley Earth comparison, not personal smoking or medical risk. Week/year assume unchanged daily pollution.',
+            'location': 'One nearby monitoring location is used across all days. It is not a measurement at the user’s home.',
+        },
+    }
 
 
 if (ROOT / 'frontend/dist').exists():
