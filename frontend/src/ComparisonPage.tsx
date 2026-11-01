@@ -46,7 +46,7 @@ function AirGraph({ phases }: { phases: Phase[] }) {
   </section>;
 }
 
-export default function ComparisonPage({ location, onLocationChange }: { location: LocationChoice | null; onLocationChange: (value: LocationChoice) => void }) {
+export default function ComparisonPage({ location, onLocationChange, onResolvedArea }: { location: LocationChoice | null; onLocationChange: (value: LocationChoice) => void; onResolvedArea?: (name: string) => void }) {
   const [areas, setAreas] = useState<LocationChoice[]>([]);
   const [query, setQuery] = useState('');
   const [data, setData] = useState<Comparison | null>(null);
@@ -71,10 +71,10 @@ export default function ComparisonPage({ location, onLocationChange }: { locatio
     const controller = new AbortController();
     setLoading(true); setError(''); setData(null);
     getJson<Comparison>('/comparison', controller.signal, { latitude: location.latitude, longitude: location.longitude })
-      .then(setData).catch(reason => { if (reason.name !== 'AbortError') { setError(reason.message); setChangingLocation(true); } })
+      .then(result => { setData(result); onResolvedArea?.(result.area); }).catch(reason => { if (reason.name !== 'AbortError') { setError(reason.message); setChangingLocation(true); } })
       .finally(() => { if (!controller.signal.aborted) setLoading(false); });
     return () => controller.abort();
-  }, [location, retry]);
+  }, [location, retry, onResolvedArea]);
 
   const choose = (area: LocationChoice) => { onLocationChange(area); setChangingLocation(false); setQuery(''); setLocationError(''); };
   const useLocation = () => {

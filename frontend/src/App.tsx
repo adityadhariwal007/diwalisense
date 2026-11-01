@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { videoOpacity } from './video-loop';
+import BeeChat from './BeeChat';
 import ComparisonPage, { type LocationChoice } from './ComparisonPage';
 import GuidelinesPage, { AboutDataPage } from './GuidelinesPage';
 
@@ -98,12 +99,11 @@ function BackgroundVideo() {
   </>;
 }
 
-export default function App() {
+function Website({ chosenLocation, setChosenLocation, onResolvedArea }: { chosenLocation: LocationChoice | null; setChosenLocation: (location: LocationChoice) => void; onResolvedArea: (name: string) => void }) {
   const [panel, setPanel] = useState<Panel>('approach');
   const [menuOpen, setMenuOpen] = useState(false);
   const dialog = useRef<HTMLDialogElement>(null);
   const [page, setPage] = useState(currentPage);
-  const [chosenLocation, setChosenLocation] = useState<LocationChoice | null>(null);
   useEffect(() => {
     const update = () => { setPage(currentPage()); window.scrollTo(0, 0); };
     window.addEventListener('hashchange', update);
@@ -114,7 +114,7 @@ export default function App() {
     if (next === 'forecast' || next === 'guidelines') { window.location.hash = next === 'forecast' ? 'compare' : 'guidelines'; return; }
     setPanel(next); dialog.current?.showModal();
   };
-  if (page === 'compare') return <ComparisonPage location={chosenLocation} onLocationChange={setChosenLocation} />;
+  if (page === 'compare') return <ComparisonPage location={chosenLocation} onLocationChange={setChosenLocation} onResolvedArea={onResolvedArea} />;
   if (page === 'guidelines') return <GuidelinesPage />;
   if (page === 'data') return <AboutDataPage />;
 
@@ -162,4 +162,11 @@ export default function App() {
       <button className="dialog-return" onClick={() => dialog.current?.close()}>Back to the view</button>
     </dialog>
   </main>;
+}
+
+export default function App() {
+  const [chosenLocation, setChosenLocation] = useState<LocationChoice | null>(null);
+  const [resolvedArea, setResolvedArea] = useState<string>();
+  const chooseLocation = (location: LocationChoice) => { setChosenLocation(location); setResolvedArea(undefined); };
+  return <><Website chosenLocation={chosenLocation} setChosenLocation={chooseLocation} onResolvedArea={setResolvedArea} /><BeeChat area={resolvedArea || chosenLocation?.name} /></>;
 }

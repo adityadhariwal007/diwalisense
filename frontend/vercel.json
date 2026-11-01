@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/chat.mjs": {
+      "maxDuration": 40
+    }
+  },
+  "git": {
+    "deploymentEnabled": {
+      "codex/gemini-chat": false
+    }
+  }
+}

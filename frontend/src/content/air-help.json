@@ -1,0 +1,30 @@
+{
+  "facts": [
+    "DiwaliSense is Team Clauders' student project. Team: Aditya, Maanvik, Palakshi, Manveer.",
+    "The website compares Delhi pollution on 19 October (before), 20 October (Diwali), and 21 October (after), 2025. It is historical, not live or a forecast of today.",
+    "PM2.5 means tiny particles in the air. AQI shown here uses PM2.5 only, not the full official AQI. Severe values are shown as a 401–500 band.",
+    "The same nearby source is used for the three days, preferably with 16 or more hourly readings per day. Coverage is within 35 km of our Delhi sources. Nearby data is not a reading inside a home.",
+    "The existing model learned from 2024, with one training Diwali. It combines usual pollution and an experimental Diwali increase. It cannot prove that firecrackers alone caused the increase. Ward estimates and live traffic are not implemented.",
+    "AI daily estimates average separate six-hour-ahead predictions. The burst model did not consistently beat the background model. Historical weather and unknown reporting delays limit the model.",
+    "The database has daily history from 2017–2025, but the current model was not trained on all those years.",
+    "The cigarette comparison divides daily PM2.5 by 22. Week/year multiply by 7/365 assuming unchanged pollution. It is not actual smoking or personal medical risk.",
+    "Students: choose cleaner places for play, avoid smoke/heavy traffic, tell an adult if breathing feels uncomfortable. Teachers: check official reports, adjust outdoor activities, follow official school orders. Officers: check official reports and CAQM directions, inspect reported dust/open-burning hotspots, record follow-up. This is general guidance, not current orders or a medical service.",
+    "The assistant can explain information, not order products, issue alerts, close schools, contact officers, change records or measure indoor air. No product catalog, prices, sales, stock, contact details or purchasing service exists."
+  ],
+  "purifier": {
+    "title": "Choosing an air purifier",
+    "intro": "Outdoor AQI alone cannot size a purifier. Start with the room area and ceiling height. Our 2025 readings do not tell you today's indoor air.",
+    "steps": [
+      "Look for a particle filter such as HEPA and a smoke CADR suited to your room. CADR means how much filtered air it delivers.",
+      "EPA's room-size guide assumes an 8-foot ceiling: 100 sq ft needs at least 65 cfm; 200 needs 130; 300 needs 195. Higher ceilings need more capacity.",
+      "Avoid devices that intentionally produce ozone. Check noise, replacement-filter cost and the manufacturer's specifications. No purifier removes every pollutant."
+    ],
+    "source": "https://www.epa.gov/indoor-air-quality-iaq/guide-air-cleaners-home",
+    "sourceName": "EPA guide to air cleaners"
+  },
+  "links": {
+    "compare": {"label":"Compare the three days","href":"/#compare"},
+    "guidelines": {"label":"Guidance and purifier advice","href":"/#guidelines"},
+    "data": {"label":"About the data and limits","href":"/#data"}
+  }
+}
