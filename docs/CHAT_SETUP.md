@@ -1,4 +1,6 @@
-# Buzzy: local setup and checks
+# Buzzy: setup and checks
+
+Buzzy is deployed at [DiwaliSense](https://diwalisense.vercel.app). Production setup and live checks were completed on 1 November 2026. API keys are stored only as production secrets in Vercel; this repository contains no real credentials.
 
 Buzzy explains the site's historical air data and gives room-size guidance for air purifiers. The supplied bee illustration floats and tilts using CSS 3D transforms. It is not a rigged 3D model. Motion can be paused and respects reduced-motion settings.
 
@@ -33,9 +35,9 @@ Checked official Google docs on 1 November 2026: [models](https://ai.google.dev/
 
 The default is `gemini-3.5-flash-lite`, a documented stable Flash-Lite text model with a Free tier. `gemini-3.8-flash` is another documented Flash option, but is never selected automatically. The API verifies the configured model's supported methods before generation. Model access does not prove free quota; confirm the project's tier in AI Studio. No billing changes, paid tools or fallback models are enabled.
 
-## Before any future Vercel deployment
+## Production configuration
 
-No deployment is authorized by this change. `frontend/vercel.json` disables automatic Git deployments for the `codex/gemini-chat` branch. After explicit approval:
+The existing DiwaliSense production project has the rate-limit SQL and server secrets configured. `main` deploys to production; `frontend/vercel.json` disables automatic Git deployments for the `codex/gemini-chat` branch. For a different environment, after deployment is authorized:
 
 1. Apply `supabase/chat_rate_limit.sql` in the intended database. It creates private request counters and a server-only quota function. It does not store messages or raw IPs.
 2. Set **server secrets** in Vercel → DiwaliSense → Settings → Environment Variables: `GEMINI_API_KEY` and `SUPABASE_SECRET_KEY`. The latter must be a Supabase secret key (or legacy service-role key), never a publishable key. Do not put either in `VITE_` variables.
@@ -60,7 +62,7 @@ Try these in the local website:
 - Close with Escape, reopen by keyboard, start a new chat, try on mobile, and pause bee motion.
 - With no API key, confirm the honest setup message and working guidance link. Do not present that state as a working Gemini demo.
 
-Tests cover conversation validation, quotas, shared-quota failure, provider failures, timeout handling, missing data, purifier calculations, origin/body limits, retrieved-data filtering and safe text rendering. Browser checks at a 390 × 844 viewport verified the missing-key error, retry focus, editing, Escape, keyboard reopening and session history. Real generated replies, the new SQL on a database and production behaviour still require setup and verification. The production build was also checked with fake server-secret canaries to ensure they do not appear in browser assets.
+Tests cover conversation validation, quotas, shared-quota failure, provider failures, timeout handling, missing data, purifier calculations, origin/body limits, retrieved-data filtering and safe text rendering. Browser checks at a 390 × 844 viewport verified the missing-key error, retry focus, editing, Escape, keyboard reopening and session history. Production checks verified origin/method/body rejection and a real Gemini answer matching all three Rohini readings (164.1, 259.4 and 262.5 µg/m³ for 19–21 October 2025). Transactional database assertions verified the six-request quota and browser-role restrictions; test counters were rolled back. Physical phones and broad load remain untested. The production build was also checked with fake server-secret canaries to ensure they do not appear in browser assets.
 
 ## Data and privacy
 

@@ -86,7 +86,7 @@ npm run build
 ## More details
 
 - [Cloud setup and database](docs/CLOUD_SETUP.md)
-- [Local bee chatbot setup — not deployed](docs/CHAT_SETUP.md)
+- [Buzzy chatbot setup and checks](docs/CHAT_SETUP.md)
 - [Full architecture and planned features](docs/architecture.md)
 - [Measured model results](docs/measured_metrics.json)
 - [Local Python demo setup](docs/round2.md)
