@@ -14,13 +14,21 @@
   }
 }
 
+:root {
+  --corner-wash:
+    radial-gradient(ellipse clamp(240px, 36vw, 560px) 420px at 0 0, #e3eee2, transparent 75%),
+    radial-gradient(ellipse clamp(240px, 36vw, 560px) 420px at 100% 0, #e6f0f6, transparent 75%),
+    radial-gradient(ellipse clamp(240px, 36vw, 560px) 420px at 0 100%, #f8edd9, transparent 75%),
+    radial-gradient(ellipse clamp(240px, 36vw, 560px) 420px at 100% 100%, #e6eee6, transparent 75%);
+}
+
 body { margin: 0; font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
 button, a { -webkit-tap-highlight-color: transparent; }
 button { cursor: pointer; }
 a, button { touch-action: manipulation; }
 button:focus-visible, a:focus-visible { outline: 2px solid #356347; outline-offset: 6px; }
 ::selection { background: #dce7dd; color: #000; }
-.hero-shell { min-height: max(860px, 100svh); display: flex; flex-direction: column; }
+.hero-shell { min-height: max(860px, 100svh); display: flex; flex-direction: column; background-image: var(--corner-wash); }
 .brand-spark { font-family: sans-serif; font-size: 19px; margin-left: 5px; vertical-align: super; color: #49644c; }
 .desktop-nav button { color: #6f6f6f; transition: color 160ms; }
 .desktop-nav button:hover { color: #000; }

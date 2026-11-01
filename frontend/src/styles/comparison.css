@@ -1,4 +1,4 @@
-.simple-page { min-height: 100svh; background: #fbfcf9; color: #243a2b; font-size: 18px; line-height: 1.6; }
+.simple-page { min-height: 100svh; background-color: #fbfcf9; background-image: var(--corner-wash); color: #243a2b; font-size: 18px; line-height: 1.6; }
 .page-header { max-width: 1240px; margin: 0 auto; padding: 28px 36px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .page-brand { font-size: 32px; color: #000; line-height: 1; white-space: nowrap; }
 .page-brand > span { font-family: sans-serif; color: #718372; font-size: 20px; vertical-align: super; margin-left: 5px; }
@@ -36,8 +36,7 @@
 .reading-switch { display: flex; flex-shrink: 0; background: #e9eee5; padding: 5px; border-radius: 30px; }
 .reading-switch button { border-radius: 25px; padding: 10px 18px; font-size: 16px; }
 .reading-switch button[aria-pressed='true'] { background: #fff; box-shadow: 0 2px 5px #253c2c12; color: #243c2c; }
-.index-explanation { font-size: 17px; color: #5d6e5f; margin: 22px 0; }
-.phase-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-bottom: 56px; }
+.phase-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin: 24px 0 56px; }
 .phase-card { display: flex; flex-direction: column; align-items: start; text-align: left; min-width: 0; border: 2px solid #e0e7db; border-radius: 18px; padding: 26px; background: #f4f6f0; }
 .phase-card.selected-phase { border-color: #527657; background: #eef3e8; }
 .phase-name { font-size: 23px; line-height: 1.3; font-weight: 500; }
@@ -72,12 +71,7 @@
 .cigarette-visual { position: relative; height: 210px; margin-top: 20px; overflow: hidden; }
 .cigarette-visual img { position: absolute; width: 100%; height: auto; top: -36px; }
 .smoke-trails { position: absolute; left: 6%; bottom: 78px; width: 80px; height: 150px; transform: rotate(-8deg); pointer-events: none; }
-.smoke-trails i { position: absolute; bottom: 10px; left: 15px; display: block; width: 40px; height: 70px; border-left: 7px solid #8d978e; border-right: 3px solid #c3cac0; border-radius: 60% 35% 70% 40%; filter: blur(7px); opacity: 0; animation: smoke-rise 5s linear infinite; }
-.smoke-trails i:nth-child(2) { animation-delay: -1.7s; }
-.smoke-trails i:nth-child(3) { animation-delay: -3.4s; }
-@keyframes smoke-rise { 0% { opacity: 0; transform: translate(0, 0) scale(0.45); } 20% { opacity: 0.45; } 70% { opacity: 0.2; } 100% { opacity: 0; transform: translate(35px, -125px) scale(1.7) rotate(30deg); } }
-.smoke-paused .smoke-trails i { animation-play-state: paused; }
-.smoke-toggle { margin-top: -12px; }
+.smoke-trails i { position: absolute; bottom: 10px; left: 15px; display: block; width: 40px; height: 70px; border-left: 7px solid #8d978e; border-right: 3px solid #c3cac0; border-radius: 60% 35% 70% 40%; filter: blur(7px); opacity: 0.3; }
 .exposure-numbers { padding-top: 12px; }
 .exposure-numbers h3 { font-size: 22px; font-weight: 500; line-height: 1.4; }
 .exposure-numbers dl { margin: 20px 0 26px; }
@@ -153,4 +147,3 @@
   .audience-switch { gap: 10px; }
   .audience-switch button { padding: 11px 18px; font-size: 17px; }
 }
-@media (prefers-reduced-motion: reduce) { .smoke-trails { display: none; } .smoke-toggle { display: none; } }
