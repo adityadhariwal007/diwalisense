@@ -34,8 +34,8 @@ The current model was trained using **2024 data** and checked against **2025 rea
 | Part | Tools |
 |---|---|
 | Website | React, Vite, TypeScript, Tailwind CSS |
-| Data and AI | Python, pandas, LightGBM |
-| Local API | FastAPI |
+| Data and AI | PythonLightGBM |
+
 | Online database | Supabase |
 | Website hosting | Vercel |
 
